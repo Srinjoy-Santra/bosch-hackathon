@@ -6,3 +6,10 @@ we need replace the values of list_other_combined in list_action by a  null so t
 ....
 No commentaries
 Then we can make that into a structured dataset
+
+
+
+
+list_action= player action  + commentary
+list_other_combined=pure commentary
+list_action - list_other_combined = pure cricket actions
