@@ -27,6 +27,9 @@ for i in list_all_lines:
     print('[',i,']')
 for i in list_action_otherwise:
     print('[',i,']')'''
+list_over_deliveries=list(set(list_over_deliveries))
+list_action=list(set(list_action))
+
 list_other_combined=list(set(list_action_otherwise+list_in_btwn_overs))
 for i in list_action:
     for j in list_other_combined:
@@ -41,7 +44,7 @@ for i in range(len(list_action)):
 print(",,,,, 2nd over" in list_other_combined)
 for i in list_other_combined:
     print('[',i,']')
-
+print(len(list(set(list_over_deliveries))))
 
 '''for i in range(0,len(list),2):
     a,b=list[i],list[i+1]
