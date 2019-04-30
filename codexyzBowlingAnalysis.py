@@ -5,6 +5,7 @@ Created on Tue Apr 30 18:03:48 2019
 @author: SwayamdiptaBiswas
 """
 from codexyzClasses import CricketPreprocess
+import matplotlib.pyplot as plt
 import pandas as pd
 class BowlingAnalysis:
     global file
@@ -83,6 +84,25 @@ class BowlingAnalysis:
         d2=DataBowlers.loc[DataBowlers['eco']==min(DataBowlers['eco'])]
         d2=d2.loc[d2['maiden']==max(d2['maiden'])]
         return d2    
+    def plotNetRunrate(self):
+        runrate=list()
+        count,m,r=1,0,0
+        for i in self.file['over']:
+            k=float(i)
+            if(k<float(int(k)+0.6)):
+                r=r+self.file['run'].reshape(-1)[m]
+                m=m+1
         
-p=BowlingAnalysis('C:\\Users\\Swayamdipta Biswas\\Downloads\\Data.txt')    
-print(p.getBowlerScoreCard())  
+            elif k==float(int(k)+0.6):
+                r=r+self.file['run'].reshape(-1)[m]
+                m=m+1
+                runrate.append(r/count)
+                count=count+1
+       
+        o=list(range(1,21,1))
+        plt.scatter(x=o,y=runrate,c='r')
+        plt.plot(o,runrate,c='b')
+        plt.show()
+        
+p=BowlingAnalysis('C:\\Users\\Swayamdipta Biswas\\Downloads\\Data.txt') 
+p.plotNetRunrate()   
