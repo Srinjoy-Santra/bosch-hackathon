@@ -9,3 +9,10 @@
 - Make the dataframe for the batsman table
 - Find final score
 - Find fall of wickets
+
+# UPDATES FROM DRAGNOTIC
+### Todays Report:
+
+- Completed Bowler scoreboard.
+- Completed Bowling facts. 
+- Completed re-structurizing and optimising the code
