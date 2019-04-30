@@ -9,7 +9,9 @@
 ## Plots
 * Image plot of runs versus balls
   * Red dots denote fall of wickets
-![Runs versus balls](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/update/venv/Include/run_vs_ball.png)
+![Runs versus balls](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/master/venv/Include/run_vs_ball.png)
+* Image plot of runrate per over
+![Runrate versus over](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/master/venv/Include/runrate.png)
  
 
 =============================================================================================
