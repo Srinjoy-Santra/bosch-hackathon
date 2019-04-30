@@ -8,7 +8,7 @@ batsman_stat = pd.DataFrame(data=[['David Warner', 'C Uthhapa b A Russell', 85, 
 fall_of_wickets = "152-3 (Yusuf Pathan, 17.3), 152-3 (Yusuf Pathan, 17.3)"
 
 bowler_stat = pd.DataFrame(data=[['Prasidh Krishna', 4, 0, 31, 0, 1, 2, 7.75],
-                                 ['Piyush CHawla', 3, 0, 23, 1, 0, 0, 7.67]],
+                                 ['Piyush Chawla', 3, 0, 23, 1, 0, 0, 7.67]],
                            columns=['bowler', 'O', 'M', 'R', 'W', 'NB', 'WD', 'ECO'])
 
 
