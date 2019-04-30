@@ -3,7 +3,7 @@ import pandas as pd
 
 team_innings = "King's IX Hyderabad" + " Innings"
 final_score = "181-3(20)"
-batsman_stat = pd.read_csv('batsman_stat.csv')[1:]
+batsman_stat = pd.read_csv('batsman_stat.csv')
 
 
 bowler_stat = pd.DataFrame(data=[['Prasidh Krishna', 4, 0, 31, 0, 1, 2, 7.75],
@@ -20,7 +20,7 @@ def add_stat(stat):
     for row in stat.itertuples():
         tr = tr + "<tr>"
         tr = tr + "<td><a href='" + name_to_url(str(row[2])) + "'>"+str(row[2])+"</a></td>"
-        for data in row[2:]:
+        for data in row[3:]:
             tr = tr + "<td>" + str(data) + "</td>"
         tr = tr + "\n</tr>"
 
