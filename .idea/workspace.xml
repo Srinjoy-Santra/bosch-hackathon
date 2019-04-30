@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="847888df-6b1f-42af-871c-dfc36fd5f373" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/BOSCH_HACKATHON/scorecard-mockup.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/BOSCH_HACKATHON/scorecard-mockup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Include/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/basic_renderer.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Include/batsman_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/batsman_stat.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/code.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/main.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/main.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/output.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Include/run_vs_ball.png" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/run_vs_ball.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,13 +16,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BowlingAnalysis.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/Include/BowlingAnalysis.py">
+      <file leaf-file-name="analysis.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/venv/Include/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="259">
+              <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
               <folding>
-                <element signature="e#141#172#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,6 +76,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,7 +110,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,7 +127,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.render">
+  <component name="RunManager" selected="Python.analysis">
+    <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bosch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Include" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Include/analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="basic_renderer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bosch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,24 +177,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Include/calculation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="code" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="bosch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Include" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Include/code.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -226,16 +222,16 @@
       <item itemvalue="Python.calculation" />
       <item itemvalue="Python.renderer" />
       <item itemvalue="Python.basic_renderer" />
-      <item itemvalue="Python.code" />
       <item itemvalue="Python.render" />
+      <item itemvalue="Python.analysis" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.analysis" />
         <item itemvalue="Python.render" />
         <item itemvalue="Python.renderer" />
         <item itemvalue="Python.basic_renderer" />
         <item itemvalue="Python.calculation" />
-        <item itemvalue="Python.code" />
       </list>
     </recent_temporary>
   </component>
@@ -256,12 +252,12 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4619469" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4619469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -279,6 +275,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/venv/Include/BowlingAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#141#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Include/BOSCH_HACKATHON/Data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5390">
@@ -324,13 +330,7 @@
     <entry file="file://$PROJECT_DIR$/venv/Include/output.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/renderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Include/renderer.py" />
     <entry file="file://$PROJECT_DIR$/venv/Include/BOSCH_HACKATHON/Data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -341,13 +341,7 @@
     <entry file="file://$PROJECT_DIR$/venv/Include/BOSCH_HACKATHON/Scorecard_Format.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/calculation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Include/calculation.py" />
     <entry file="file://$PROJECT_DIR$/venv/Include/extractor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -369,9 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -389,38 +380,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Include/basic_renderer.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Include/BowlingAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#141#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Include/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="151" column="11" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
+        <state relative-caret-position="259">
+          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/basic_renderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/BowlingAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="e#141#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
