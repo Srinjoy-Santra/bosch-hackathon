@@ -1,6 +1,6 @@
 import pandas as pd
 
-team_innings = "Sunriser's Hyderabad" + " Innings"
+team_innings = "King's IX Hyderabad" + " Innings"
 final_score = "181-3(20)"
 batsman_stat = pd.DataFrame(data=[['David Warner', 'C Uthhapa b A Russell', 85, 53, 9, 3, 160.38],
                                   ['Jonny Bairstow', 'b Chawla', 39, 35, 3, 1, 111.43]],

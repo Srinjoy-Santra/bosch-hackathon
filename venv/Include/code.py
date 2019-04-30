@@ -72,7 +72,7 @@ for i in list_action:
     elif 'out' in lsplit[1]:
 
         v = lsplit[1].split('!')[0].split(' ')
-       
+        
         if 'bowled' == v[2]:
             out.append(dictionary1[v[2]])
             run.append(0)
@@ -94,7 +94,7 @@ for i in list_action:
             lout.append("c " + v[4] + " b " + name)
             no_ball.append(0)
             
-        #NO LBWs FOUND!!
+        #NO LBWs FOUND!!NO RUN OUTS FOUND!!
         
     elif 'no ball' in lsplit[1]:
         no_ball.append(1)
@@ -123,13 +123,78 @@ data['Out']=out()
 data['Out By']=  ()'''
 
 #print(batsman,'\n\t',bowler,'\n\t',run,'\n\t',wide,'\n\t',lb,'\n\t',no_ball,'\n\t',out,'\n\t',lout)
+
+# Creating the dataset
 df_columns=['batsman','bowler','runs','wide','lb','nb','out','out_by']
 df = pd.DataFrame({
         'batsman':batsman,'bowler':bowler,'run':run,'wide':wide,
         'lb':lb,'nb':no_ball,'out':out,'out_by':lout})
+
+# Calculating the final score    
 total_runs = sum(run)
 no_of_wickets = 0
 for verdict in out:
     if verdict is 'c' or verdict is 'b':
         no_of_wickets = no_of_wickets + 1
+overs = len(bowler)/6
+if overs > 20:
+    overs = 20
+    
+final_score = str(total_runs)+"-"+str(no_of_wickets)+" ("+str(overs)+")"
+
+
+# Fall of wickets calculation [Error]
+score = 0
+outs = 0
+balls = 0
+
+for row in df.itertuples():
+    score = score + row.run
+    if row.wide is not 1 or  row.nb is not 1 or row.lb is not 1:
+        balls = balls + 1
+    if row.out is 'c' or row.out is 'b':
+        outs = outs + 1
+        #balls = list_action[row.Index]
+        
+        print(str(score)+'-'+str(outs)+" ("+ row.batsman +", "+str(balls//6)+'.'+str(balls%6)+")")
+        balls = balls - 1
+    #else:
+        
+        #print(str(balls) + " = "+ str(balls//6)+'.'+str(balls%6) + ":" + str(row.Index))
+  
+
+#Batsman Table
+batsman_stat = pd.DataFrame(columns=['batsman', 'dismissal',
+                                     'R', 'B', '4s', '6s', 'SR'])
+
+batsmen = list(dict.fromkeys(batsman))
+count = 0
+for batsman in batsmen:
+    nsixes = 0
+    nfours = 0
+    runs = 0
+    balls = 0
+    dismissal = ''
+    for row in df.itertuples():
+        
+        if batsman == row.batsman:
+            #print([batsman,row.batsman])
+            balls = balls + 1
+            if row.out != 'not out':
+                dismissal = row.out_by
+                print(row.out)
+                break
+            if row.run is 6:
+                nsixes += 1
+            elif row.run is 4:
+                nfours += 1
+            else:
+                runs += row.run
+            
+    #batsman_stat.loc[count] = [batsman,dismissal]
+    print([batsman,dismissal,runs+4*nfours+6*nsixes,balls,nfours,nsixes,0])
+    count += 1
+        
+        
+
         
