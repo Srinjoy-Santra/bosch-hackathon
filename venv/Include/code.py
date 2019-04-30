@@ -178,10 +178,15 @@ data['Out By']=  ()'''
 #print(batsman,'\n\t',bowler,'\n\t',run,'\n\t',wide,'\n\t',lb,'\n\t',no_ball,'\n\t',out,'\n\t',lout)
 
 # Creating the dataset
-df_columns=['batsman','bowler','runs','wide','lb','nb','out','out_by']
-df = pd.DataFrame({
-        'batsman':batsman,'bowler':bowler,'run':run,'wide':wide,
-        'lb':lb,'nb':no_ball,'out':out,'out_by':lout})
+i,lis=0,list()
+lis.append(list_over_deliveries[0])
+        
+for i in list_over_deliveries:
+    if(i not in lis):
+        lis.append(i)
+df_columns = ['over','batsman', 'bowler', 'run', 'wide', 'lb', 'nb', 'out', 'out_by']
+df = pd.DataFrame({'1':lis,'2': batsman, '3': bowler, '4': run, '5': wide,'6': lb, '7': no_ball, '8': out, '9': lout})
+df.columns=df_columns
 df.to_csv('main.csv',index=False)
 
 tweets = []
@@ -194,6 +199,3 @@ for row in list_other_combined:
             tweets.append(row)
     except:
         pass
-     
-
-        
