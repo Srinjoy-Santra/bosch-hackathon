@@ -1,6 +1,6 @@
 import re
-
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 file = open(r'C:\Users\nEW u\PycharmProjects\bosch\venv\Include\BOSCH_HACKATHON\Data.txt')
@@ -48,70 +48,123 @@ lout = list() # b-bowled,c-caught
 
 dictionary1 = {'1 run': 1, 'bowled': 'b', 'caught': 'c', 'no run': 0, 'six': 6, 'four': 4,'5 runs': 5, 'wide': 1, '2 runs': 2, 'leg byes': 1, '4': 4, '6': 6}
 
-for i in list_action:
-    lsplit = i.split(',')
 
-    batsman.append(lsplit[0].split('to')[1])
-    bowler.append(lsplit[0].split('to')[0])
+hasWide = False
+for i in range(0,len(list_action)):
+    lsplit = list_action[i].split(',')
+    
+    #if wide[-1] is 1 and run[-1] is not 1:
+        #lsplit = list_action[i-1].split(',')
+    w=r=l=nb=0
+    lo='none'
+    ou='not out'
+        
+    
     if ('wide' in lsplit[1]):
+        w=1
+        r=1
+        hasWide = True
+        '''
         wide.append(1)
         lout.append('none')
         run.append(1)
         lb.append(0)
         out.append('not out')
         no_ball.append(0)
+        '''
+        
 
     elif ('leg byes' in lsplit[1]):
+        l=1
+        r=dictionary1[lsplit[2].strip()]
+        '''
         lb.append(1)
         run.append(dictionary1[lsplit[2].strip()])
         out.append('not out')
         lout.append('none')
         wide.append(0)
         no_ball.append(0)
-        
+        '''
     elif 'out' in lsplit[1]:
 
         v = lsplit[1].split('!')[0].split(' ')
         
         if 'bowled' == v[2]:
+            ou = dictionary1[v[2]]
+            lo = lsplit[0].split('to')[0]
+            '''
             out.append(dictionary1[v[2]])
             run.append(0)
             wide.append(0)
             lb.append(0)
             no_ball.append(0)
             lout.append(lsplit[0].split('to')[0])
+            '''
         elif 'caught' == v[2]:
-            out.append(dictionary1[v[2]])
-            run.append(0)
-            wide.append(0)
-            lb.append(0)
+            ou = dictionary1[v[2]]
             
             bowlern = lsplit[0].split(' ')[0:2]
             name = bowlern[0]
             if len(name) is 1:
                 name = name + " " + bowlern[1]
             
-            lout.append("c " + v[4] + " b " + name)
+            lo = "c " + v[4] + " b " + name
+            '''
+            out.append(dictionary1[v[2]])
+            run.append(0)
+            wide.append(0)
+            lb.append(0)
             no_ball.append(0)
+            lout.append("c " + v[4] + " b " + name)
+            '''
+            
+            
+           
             
         #NO LBWs FOUND!!NO RUN OUTS FOUND!!
         
     elif 'no ball' in lsplit[1]:
+        nb=1
+        '''
         no_ball.append(1)
         out.append('not out')
         run.append(0)
         wide.append(0)
         lb.append(0)
         lout.append('none')
+        '''
 
     else:
+        r=dictionary1[lsplit[1].strip()]
+        '''
         wide.append(0)
         lb.append(0)
         out.append('not out')
         lout.append('none')
         run.append(dictionary1[lsplit[1].strip()])
         no_ball.append(0)
+        w=r=l=nb=0
+        lo='none'
+        ou='not out'
+        '''
+    if w is not 1:
+        batsman.append(lsplit[0].split('to')[1])
+        bowler.append(lsplit[0].split('to')[0])
+        if hasWide:
+            w += 1
+            
+        wide.append(w)
+        run.append(r)
+        lb.append(l)
+        no_ball.append(nb)
+        lout.append(lo)
+        out.append(ou)
+        hasWide = False
+    
+    #print([batsman[-1],bowler[-1],run[-1],wide[-1],lb[-1],no_ball[-1],out[-1],lout[-1]])
+    
 
+        
 '''data=pd.DataFrame()
 data['Batsman']=batsman()
 data['Bowler']=bowler()
@@ -129,72 +182,8 @@ df_columns=['batsman','bowler','runs','wide','lb','nb','out','out_by']
 df = pd.DataFrame({
         'batsman':batsman,'bowler':bowler,'run':run,'wide':wide,
         'lb':lb,'nb':no_ball,'out':out,'out_by':lout})
+df.to_csv('main.csv')
 
-# Calculating the final score    
-total_runs = sum(run)
-no_of_wickets = 0
-for verdict in out:
-    if verdict is 'c' or verdict is 'b':
-        no_of_wickets = no_of_wickets + 1
-overs = len(bowler)/6
-if overs > 20:
-    overs = 20
-    
-final_score = str(total_runs)+"-"+str(no_of_wickets)+" ("+str(overs)+")"
-
-
-# Fall of wickets calculation [Error]
-score = 0
-outs = 0
-balls = 0
-
-for row in df.itertuples():
-    score = score + row.run
-    if row.wide is not 1 or  row.nb is not 1 or row.lb is not 1:
-        balls = balls + 1
-    if row.out is 'c' or row.out is 'b':
-        outs = outs + 1
-        #balls = list_action[row.Index]
-        
-        print(str(score)+'-'+str(outs)+" ("+ row.batsman +", "+str(balls//6)+'.'+str(balls%6)+")")
-        balls = balls - 1
-    #else:
-        
-        #print(str(balls) + " = "+ str(balls//6)+'.'+str(balls%6) + ":" + str(row.Index))
-  
-
-#Batsman Table
-batsman_stat = pd.DataFrame(columns=['batsman', 'dismissal',
-                                     'R', 'B', '4s', '6s', 'SR'])
-
-batsmen = list(dict.fromkeys(batsman))
-count = 0
-for batsman in batsmen:
-    nsixes = 0
-    nfours = 0
-    runs = 0
-    balls = 0
-    dismissal = ''
-    for row in df.itertuples():
-        
-        if batsman == row.batsman:
-            #print([batsman,row.batsman])
-            balls = balls + 1
-            if row.out != 'not out':
-                dismissal = row.out_by
-                print(row.out)
-                break
-            if row.run is 6:
-                nsixes += 1
-            elif row.run is 4:
-                nfours += 1
-            else:
-                runs += row.run
-            
-    #batsman_stat.loc[count] = [batsman,dismissal]
-    print([batsman,dismissal,runs+4*nfours+6*nsixes,balls,nfours,nsixes,0])
-    count += 1
-        
-        
+     
 
         
