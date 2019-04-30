@@ -47,3 +47,6 @@
 - Dragnotic is informed the 100th time to remove those unnecessary class features
 -- Look at Srinjoy's analysis.py code and try to bring it to the same format to maintain sanity, uniformity and cooperation
  
+### 3rd Update
+- For Class less follow codexyz.py
+- For Classfull follow codexyzBowlingAnalysis.py
