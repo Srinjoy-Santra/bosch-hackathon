@@ -5,6 +5,7 @@ Created on Tue Apr 30 18:03:48 2019
 @author: SwayamdiptaBiswas
 """
 from codexyzClasses import CricketPreprocess
+
 import matplotlib.pyplot as plt
 import pandas as pd
 class BowlingAnalysis:
@@ -21,6 +22,15 @@ class BowlingAnalysis:
         df2=pd.DataFrame()
 
         bowl_er=list(set(self.bowler))
+        
+       
+        i,lis=0,list()
+        lis.appendt(df.loc[df['over']==float(i+0.1)]['bowler'])
+        
+        while(i <= int(df[-1,0])):
+            i=i+1
+            if(df.loc[df['over']==float(i+0.1)]['bowler'] not in lis):
+                lis.append(df.loc[df['over']==float(i+0.1)]['bowler'])
         for i in bowl_er:
             counter=0
             m=0
