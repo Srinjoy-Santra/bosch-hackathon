@@ -67,3 +67,7 @@
 ### 3rd Update
 - For Class less follow codexyz.py
 - For Classfull follow codexyzBowlingAnalysis.py
+
+### NOTE
+- xyzCODE.py is analysis.py
+
