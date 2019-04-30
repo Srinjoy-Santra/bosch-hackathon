@@ -25,3 +25,9 @@
 ### ISSUES
 - Unexpected Error: in codexyzclasses2.py (GOD KNOWS WHY? SEEMS PERFECTLY FINE TO ME)
 - Required to go through the code and fix the error (idk what)
+
+### UPDATES FROM Srinjoy
+- Combined analysis with render to get output html
+- Dragnotic is informed the 100th time to remove those unnecessary class features
+-- Look at Srinjoy's analysis.py code and try to bring it to the same format to maintain sanity, uniformity and cooperation
+ 
