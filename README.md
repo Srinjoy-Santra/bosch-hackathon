@@ -1,4 +1,5 @@
 # bosch-hackathon
+# CHECK UPDATE's README
 ML methods applied to running cricket commentary
 *****************************************************************************************************************************
   # UPDATES FROM DRAGNOTIC
