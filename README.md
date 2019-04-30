@@ -1,4 +1,20 @@
 # Bosch Hackathon
+
+## List of contents
+* BOSCH_HACKATHON : contains all the original files provided by the question setter
+	* scorecard_mockup.html is made by the participating team to copy Scorecard_Format
+
+## Plots
+* Image plot of runs versus balls
+  * Red dots denote fall of wickets
+![Runs versus balls](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/update/venv/Include/run_vs_ball.png)
+ 
+
+
+## TEAM ACTIVITY [To be deleted]
+
+### ANY FURTHER ISSUES RAISE IN THE ISSUES SECTION!! DON'T UPDATE README
+
 ### Dragonik's contribution
 - Preferably Make a new branch (e.g. new-update) from this branch (i.e update)
 - Make the dataframe for the bowler table 
