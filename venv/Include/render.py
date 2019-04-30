@@ -51,7 +51,7 @@ body = """
         <table>
             <tr><th>Fall of Wickets</th></tr>
             <tr>
-                <td>""" + fall_of_wickets + """</td>
+                <td>""" + an.fall_of_wickets + """</td>
             </tr>
         </table>
         <table>
@@ -68,11 +68,14 @@ body = """
             """ + add_stat(bowler_stat) + """
         </table>
         <h3>Trivia</h3>
-        <blockquote>Fastest Bowler is """+an.get_name(an.fastest_bowler[0].strip().lower())+" with a speed of "+str(an.fastest_bowler[1])+""" </blockquote>     
-        <blockquote>Biggest Six?</blockquote>     
+        <blockquote>Fastest Ball by """+an.get_name(an.fastest_bowler[0].strip().lower())+" with a speed of "+str(an.fastest_bowler[1])+""" </blockquote>     
+        <blockquote>Best Hitter """+an.best_batter[0]+" scoring "+str(an.best_batter[1])+""" points</blockquote>     
+        <blockquote>Best Hitter """+an.best_batter[0]+" scoring "+str(an.best_batter[1])+""" points</blockquote>     
+           
         <blockquote>Did you really expect one more?</blockquote> 
         <br/>    
         <img src="run_vs_ball.png" alt='runs vs balls'/>
+        <img src="runrate.png" alt='run rate'/>
     </body>
 """
 
