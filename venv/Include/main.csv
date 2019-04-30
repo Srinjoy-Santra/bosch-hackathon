@@ -1,0 +1,121 @@
+batsman,bowler,lb,nb,out,out_by,run,wide
+ rahul,prasidh ,0,0,not out,none,1,0
+ gayle,prasidh ,0,0,not out,none,0,0
+ gayle,prasidh ,0,0,not out,none,6,0
+ gayle,prasidh ,0,0,not out,none,0,0
+ gayle,prasidh ,0,0,not out,none,4,0
+ gayle,prasidh ,0,0,not out,none,0,0
+ rahul,ferguson ,0,0,not out,none,0,0
+ rahul,ferguson ,0,0,not out,none,0,0
+ rahul,ferguson ,0,0,not out,none,0,0
+ rahul,ferguson ,0,0,c,c kuldeep b ferguson,0,0
+ agarwal,ferguson ,0,0,not out,none,1,0
+ gayle,ferguson ,0,0,not out,none,0,0
+ agarwal,prasidh ,0,0,not out,none,4,1
+ agarwal,prasidh ,0,0,not out,none,4,0
+ agarwal,prasidh ,0,0,not out,none,0,0
+ agarwal,prasidh ,0,0,not out,none,0,0
+ agarwal,prasidh ,0,0,not out,none,0,0
+ agarwal,prasidh ,0,0,not out,none,4,0
+ gayle,ferguson ,0,0,not out,none,0,0
+ gayle,ferguson ,0,0,not out,none,0,0
+ gayle,ferguson ,0,0,not out,none,0,1
+ gayle,ferguson ,0,0,not out,none,0,0
+ gayle,ferguson ,0,0,not out,none,4,0
+ gayle,ferguson ,0,0,not out,none,6,0
+ agarwal,a russell ,0,0,not out,none,1,0
+ gayle,a russell ,0,0,c,c prasidh b a russell,0,0
+ sarfaraz khan,a russell ,0,0,not out,none,0,0
+ sarfaraz khan,a russell ,0,0,not out,none,4,0
+ sarfaraz khan,a russell ,0,0,not out,none,1,0
+ agarwal,a russell ,0,0,not out,none,1,0
+ agarwal,prasidh ,0,0,not out,none,5,0
+ sarfaraz khan,prasidh ,0,0,not out,none,0,0
+ sarfaraz khan,prasidh ,0,0,not out,none,0,0
+ sarfaraz khan,prasidh ,0,0,not out,none,1,0
+ agarwal,prasidh ,0,0,not out,none,1,0
+ sarfaraz khan,prasidh ,0,0,not out,none,1,0
+ sarfaraz khan,kuldeep yadav ,0,0,not out,none,0,0
+ sarfaraz khan,kuldeep yadav ,0,0,not out,none,1,0
+ agarwal,kuldeep yadav ,0,0,not out,none,1,0
+ sarfaraz khan,kuldeep yadav ,0,0,not out,none,0,0
+ sarfaraz khan,kuldeep yadav ,0,0,not out,none,1,0
+ agarwal,kuldeep yadav ,0,0,not out,none,1,0
+ agarwal,a russell ,0,0,not out,none,1,0
+ sarfaraz khan,a russell ,0,0,not out,none,4,0
+ sarfaraz khan,a russell ,0,0,c,c karthik b a russell,0,0
+ agarwal,a russell ,0,0,not out,none,0,0
+ agarwal,a russell ,0,0,not out,none,1,0
+ miller,a russell ,0,0,not out,none,0,0
+ agarwal,kuldeep yadav ,0,0,not out,none,1,0
+ miller,kuldeep yadav ,0,0,not out,none,1,0
+ agarwal,kuldeep yadav ,0,0,not out,none,1,1
+ miller,kuldeep yadav ,0,0,not out,none,0,0
+ miller,kuldeep yadav ,0,0,not out,none,4,0
+ miller,kuldeep yadav ,0,0,not out,none,1,0
+ miller,narine ,0,0,not out,none,0,0
+ miller,narine ,0,0,not out,none,0,0
+ miller,narine ,0,0,not out,none,1,0
+ agarwal,narine ,0,0,not out,none,1,0
+ miller,narine ,0,0,not out,none,1,0
+ agarwal,narine ,0,0,not out,none,4,0
+ miller,kuldeep yadav ,0,0,not out,none,0,0
+ miller,kuldeep yadav ,0,0,not out,none,1,0
+ agarwal,kuldeep yadav ,0,0,not out,none,1,1
+ miller,kuldeep yadav ,0,0,not out,none,0,0
+ miller,kuldeep yadav ,0,0,not out,none,6,0
+ miller,kuldeep yadav ,0,0,not out,none,1,0
+ miller,narine ,0,0,not out,none,0,0
+ miller,narine ,0,0,not out,none,6,0
+ miller,narine ,0,0,not out,none,4,0
+ miller,narine ,0,0,not out,none,1,0
+ agarwal,narine ,0,0,not out,none,4,0
+ agarwal,narine ,0,0,not out,none,4,0
+ miller,chawla ,0,0,not out,none,1,0
+ agarwal,chawla ,0,0,not out,none,6,0
+ agarwal,chawla ,1,0,not out,none,1,0
+ miller,chawla ,0,0,not out,none,0,0
+ miller,chawla ,0,0,not out,none,0,0
+ miller,chawla ,0,0,not out,none,2,0
+ agarwal,a russell ,0,0,not out,none,2,0
+ agarwal,a russell ,0,0,not out,none,0,0
+ agarwal,a russell ,0,0,not out,none,2,0
+ agarwal,a russell ,0,0,not out,none,2,0
+ agarwal,a russell ,0,0,not out,none,0,0
+ agarwal,a russell ,0,0,not out,none,2,0
+ miller,kuldeep yadav ,0,0,not out,none,0,0
+ miller,kuldeep yadav ,0,0,not out,none,1,0
+ agarwal,kuldeep yadav ,0,0,not out,none,2,0
+ agarwal,kuldeep yadav ,0,0,not out,none,1,0
+ miller,kuldeep yadav ,0,0,not out,none,4,0
+ miller,kuldeep yadav ,0,0,not out,none,1,0
+ miller,chawla ,0,0,not out,none,1,0
+ agarwal,chawla ,0,0,b,chawla ,0,0
+ mandeep,chawla ,0,0,not out,none,1,0
+ miller,chawla ,0,0,not out,none,1,0
+ mandeep,chawla ,0,0,not out,none,1,0
+ miller,chawla ,0,0,not out,none,0,0
+ mandeep,ferguson ,0,0,not out,none,6,0
+ mandeep,ferguson ,0,0,not out,none,1,0
+ miller,ferguson ,0,0,not out,none,4,0
+ miller,ferguson ,0,0,not out,none,1,0
+ mandeep,ferguson ,0,0,not out,none,2,0
+ mandeep,ferguson ,0,0,not out,none,1,0
+ mandeep,prasidh ,0,0,not out,none,0,0
+ mandeep,prasidh ,0,0,not out,none,1,0
+ miller,prasidh ,0,0,not out,none,4,0
+ miller,prasidh ,0,0,not out,none,0,0
+ miller,prasidh ,0,0,not out,none,1,0
+ mandeep,prasidh ,0,0,not out,none,4,0
+ miller,ferguson ,0,0,not out,none,1,1
+ mandeep,ferguson ,0,0,not out,none,4,0
+ mandeep,ferguson ,0,0,not out,none,1,0
+ miller,ferguson ,0,0,not out,none,2,0
+ miller,ferguson ,0,0,not out,none,6,0
+ miller,ferguson ,0,0,not out,none,0,0
+ mandeep,chawla ,0,0,not out,none,4,0
+ mandeep,chawla ,0,0,not out,none,2,0
+ mandeep,chawla ,0,0,not out,none,4,0
+ mandeep,chawla ,0,0,not out,none,1,0
+ miller,chawla ,0,0,not out,none,2,0
+ miller,chawla ,0,0,not out,none,0,0
