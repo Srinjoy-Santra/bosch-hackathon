@@ -106,7 +106,7 @@ for i in range(0, len(list_action)):
             if len(name) is 1:
                 name = name + " " + bowlern[1]
 
-            lo = "c " + v[4] + " b " + name
+            lo = "c " + v[4].capitalize() + " b " + name.capitalize()
             '''
             out.append(dictionary1[v[2]])
             run.append(0)
