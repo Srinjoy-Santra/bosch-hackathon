@@ -8,11 +8,11 @@ No commentaries
 Then we can make that into a structured dataset
 
 
+### To Understand
 
-
-list_action= player action  + commentary
-list_other_combined=pure commentary
-list_action - list_other_combined = pure cricket actions
+- list_action= player action  + commentary
+- list_other_combined=pure commentary
+- list_action - list_other_combined = pure cricket actions
 
 *****************************************************************************************************************************
   # UPDATES FROM DRAGNOTIC
