@@ -70,4 +70,6 @@
 
 ### NOTE
 - xyzCODE.py is analysis.py
-
+### Dragnotic's 4th Update:
+- weight.py is the weighted BowlingScore Card
+- WeightedBowlingScoreBoard.csv had the file 
