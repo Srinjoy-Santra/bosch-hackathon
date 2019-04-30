@@ -15,12 +15,13 @@ list_other_combined=pure commentary
 list_action - list_other_combined = pure cricket actions
 
 *****************************************************************************************************************************
-  Todays Report:
-  
-  
-  Completed Bowler scoreboard.
-  Completed Bowling facts.
-  Completed re-structurizing and optimising the code
+  # UPDATES FROM DRAGNOTIC
+### Todays Report:
+
+- Completed Bowler scoreboard.
+- Completed Bowling facts. 
+- Completed re-structurizing and optimising the code
+
   
 
 
