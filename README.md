@@ -19,6 +19,9 @@ ML methods applied to running cricket commentary
 ### ISSUES
 - Unexpected Error: in codexyzclasses2.py (GOD KNOWS WHY? SEEMS PERFECTLY FINE TO ME)
 - Required to go through the code and fix the error (idk what)
+### 3rd Update
+- For Class less follow codexyz.py
+- For Classfull follow codexyzBowlingAnalysis.py
 
 
   
