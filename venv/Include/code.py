@@ -182,8 +182,18 @@ df_columns=['batsman','bowler','runs','wide','lb','nb','out','out_by']
 df = pd.DataFrame({
         'batsman':batsman,'bowler':bowler,'run':run,'wide':wide,
         'lb':lb,'nb':no_ball,'out':out,'out_by':lout})
-df.to_csv('main.csv')
+df.to_csv('main.csv',index=False)
 
+tweets = []
+for row in list_other_combined:
+    say = row.split(' ')
+    
+    try:
+        print(say[1])
+        if say[1] == 'says:' or say[2] == 'says:':
+            tweets.append(row)
+    except:
+        pass
      
 
         

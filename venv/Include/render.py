@@ -1,26 +1,29 @@
+import analysis as an
 import pandas as pd
 
+team_innings = "King's IX Punjab" + " Innings"
+#final_score = "181-3(20)"
+batsman_stat = an.batsman_stat
 
-team_innings = "King's IX Hyderabad" + " Innings"
-final_score = "181-3(20)"
-batsman_stat = pd.read_csv('batsman_stat.csv')
+bowler_stat = pd.read_csv('bowler_stat.csv')
+# print(bowler_stat['bowler'])
+# bowler_stat['bowler'] = (bowler_stat['bowler']).lstrip()#(str(x).lstrip() for x in bowler_stat['bowler'])
 
-
-bowler_stat = pd.DataFrame(data=[['Prasidh Krishna', 4, 0, 31, 0, 1, 2, 7.75],
+'''
+pd.DataFrame(data=[['Prasidh Krishna', 4, 0, 31, 0, 1, 2, 7.75],
                                  ['Piyush Chawla', 3, 0, 23, 1, 0, 0, 7.67]],
                            columns=['bowler', 'O', 'M', 'R', 'W', 'NB', 'WD', 'ECO'])
-
-fall_of_wickets = " cdvd "
+'''
+fall_of_wickets = an.fall_of_wickets
 # print(batsman_stat)
-def name_to_url(name):
-    return "https://en.wikipedia.org/wiki/" + name.replace(" ", '_')
+
 
 def add_stat(stat):
     tr = ""
     for row in stat.itertuples():
         tr = tr + "<tr>"
-        tr = tr + "<td><a href='" + name_to_url(str(row[2])) + "'>"+str(row[2])+"</a></td>"
-        for data in row[3:]:
+        tr = tr + "<td><a href='" + an.name_to_url(str(row[1])) + "'>"+str(row[1])+"</a></td>"
+        for data in row[2:]:
             tr = tr + "<td>" + str(data) + "</td>"
         tr = tr + "\n</tr>"
 
@@ -32,7 +35,7 @@ body = """
         <table>
            <caption>
                <span>""" + team_innings + """</span>
-               <span>""" + final_score + """</span>
+               <span>""" + an.final_score + """</span>
             </caption>
             <tr>
             <th>Batsman</th>
@@ -43,7 +46,6 @@ body = """
             <th>6s</th>
             <th>SR</th>
             </tr>
-
             """ + add_stat(batsman_stat) + """
         </table>
         <table>
@@ -66,12 +68,12 @@ body = """
             """ + add_stat(bowler_stat) + """
         </table>
         <h3>Trivia</h3>
-        <blockquote>Fastest Bowler?</blockquote>     
+        <blockquote>Fastest Bowler is """+an.get_name(an.fastest_bowler[0].strip().lower())+" with a speed of "+str(an.fastest_bowler[1])+""" </blockquote>     
         <blockquote>Biggest Six?</blockquote>     
-        <blockquote>Did you really expect one more?</blockquote>     
-        <a href="https://en.wikipedia.org/wiki/Ashok_Dinda">Person</a>
+        <blockquote>Did you really expect one more?</blockquote> 
+        <br/>    
+        <img src="run_vs_ball.png" alt='runs vs balls'/>
     </body>
-
 """
 
 head = """<html>
@@ -83,7 +85,6 @@ head = """<html>
             }
             table {
                       border-collapse: collapse;
-
                       width:100%;
                 }
             th {
@@ -99,7 +100,6 @@ head = """<html>
                 padding: 4px;
                 font-family: monospace;
             }
-
             caption > span {
                 justify-content: flex-end;
             }
@@ -115,4 +115,4 @@ print(head)
 f = open('output.html', "w+")
 f.write(head)
 
-print(batsman_stat)
+print(bowler_stat)
