@@ -1,0 +1,121 @@
+over,batsman,bowler,run,wide,lb,nb,out,out_by
+0.1, rahul,prasidh ,1,0,0,0,not out,none
+0.2, gayle,prasidh ,0,0,0,0,not out,none
+0.3, gayle,prasidh ,6,0,0,0,not out,none
+0.4, gayle,prasidh ,0,0,0,0,not out,none
+0.5, gayle,prasidh ,4,0,0,0,not out,none
+0.6, gayle,prasidh ,0,0,0,0,not out,none
+1.1, rahul,ferguson ,0,0,0,0,not out,none
+1.2, rahul,ferguson ,0,0,0,0,not out,none
+1.3, rahul,ferguson ,0,0,0,0,not out,none
+1.4, rahul,ferguson ,0,0,0,0,c,c kuldeep b ferguson
+1.5, agarwal,ferguson ,1,0,0,0,not out,none
+1.6, gayle,ferguson ,0,0,0,0,not out,none
+2.1, agarwal,prasidh ,4,1,0,0,not out,none
+2.2, agarwal,prasidh ,4,0,0,0,not out,none
+2.3, agarwal,prasidh ,0,0,0,0,not out,none
+2.4, agarwal,prasidh ,0,0,0,0,not out,none
+2.5, agarwal,prasidh ,0,0,0,0,not out,none
+2.6, agarwal,prasidh ,4,0,0,0,not out,none
+3.1, gayle,ferguson ,0,0,0,0,not out,none
+3.2, gayle,ferguson ,0,0,0,0,not out,none
+3.3, gayle,ferguson ,0,1,0,0,not out,none
+3.4, gayle,ferguson ,0,0,0,0,not out,none
+3.5, gayle,ferguson ,4,0,0,0,not out,none
+3.6, gayle,ferguson ,6,0,0,0,not out,none
+4.1, agarwal,a russell ,1,0,0,0,not out,none
+4.2, gayle,a russell ,0,0,0,0,c,c prasidh b a russell
+4.3, sarfaraz khan,a russell ,0,0,0,0,not out,none
+4.4, sarfaraz khan,a russell ,4,0,0,0,not out,none
+4.5, sarfaraz khan,a russell ,1,0,0,0,not out,none
+4.6, agarwal,a russell ,1,0,0,0,not out,none
+5.1, agarwal,prasidh ,5,0,0,0,not out,none
+5.2, sarfaraz khan,prasidh ,0,0,0,0,not out,none
+5.3, sarfaraz khan,prasidh ,0,0,0,0,not out,none
+5.4, sarfaraz khan,prasidh ,1,0,0,0,not out,none
+5.5, agarwal,prasidh ,1,0,0,0,not out,none
+5.6, sarfaraz khan,prasidh ,1,0,0,0,not out,none
+6.1, sarfaraz khan,kuldeep yadav ,0,0,0,0,not out,none
+6.2, sarfaraz khan,kuldeep yadav ,1,0,0,0,not out,none
+6.3, agarwal,kuldeep yadav ,1,0,0,0,not out,none
+6.4, sarfaraz khan,kuldeep yadav ,0,0,0,0,not out,none
+6.5, sarfaraz khan,kuldeep yadav ,1,0,0,0,not out,none
+6.6, agarwal,kuldeep yadav ,1,0,0,0,not out,none
+7.1, agarwal,a russell ,1,0,0,0,not out,none
+7.2, sarfaraz khan,a russell ,4,0,0,0,not out,none
+7.3, sarfaraz khan,a russell ,0,0,0,0,c,c karthik b a russell
+7.4, agarwal,a russell ,0,0,0,0,not out,none
+7.5, agarwal,a russell ,1,0,0,0,not out,none
+7.6, miller,a russell ,0,0,0,0,not out,none
+8.1, agarwal,kuldeep yadav ,1,0,0,0,not out,none
+8.2, miller,kuldeep yadav ,1,0,0,0,not out,none
+8.3, agarwal,kuldeep yadav ,1,1,0,0,not out,none
+8.4, miller,kuldeep yadav ,0,0,0,0,not out,none
+8.5, miller,kuldeep yadav ,4,0,0,0,not out,none
+8.6, miller,kuldeep yadav ,1,0,0,0,not out,none
+9.1, miller,narine ,0,0,0,0,not out,none
+9.2, miller,narine ,0,0,0,0,not out,none
+9.3, miller,narine ,1,0,0,0,not out,none
+9.4, agarwal,narine ,1,0,0,0,not out,none
+9.5, miller,narine ,1,0,0,0,not out,none
+9.6, agarwal,narine ,4,0,0,0,not out,none
+10.1, miller,kuldeep yadav ,0,0,0,0,not out,none
+10.2, miller,kuldeep yadav ,1,0,0,0,not out,none
+10.3, agarwal,kuldeep yadav ,1,1,0,0,not out,none
+10.4, miller,kuldeep yadav ,0,0,0,0,not out,none
+10.5, miller,kuldeep yadav ,6,0,0,0,not out,none
+10.6, miller,kuldeep yadav ,1,0,0,0,not out,none
+11.1, miller,narine ,0,0,0,0,not out,none
+11.2, miller,narine ,6,0,0,0,not out,none
+11.3, miller,narine ,4,0,0,0,not out,none
+11.4, miller,narine ,1,0,0,0,not out,none
+11.5, agarwal,narine ,4,0,0,0,not out,none
+11.6, agarwal,narine ,4,0,0,0,not out,none
+12.1, miller,chawla ,1,0,0,0,not out,none
+12.2, agarwal,chawla ,6,0,0,0,not out,none
+12.3, agarwal,chawla ,1,0,1,0,not out,none
+12.4, miller,chawla ,0,0,0,0,not out,none
+12.5, miller,chawla ,0,0,0,0,not out,none
+12.6, miller,chawla ,2,0,0,0,not out,none
+13.1, agarwal,a russell ,2,0,0,0,not out,none
+13.2, agarwal,a russell ,0,0,0,0,not out,none
+13.3, agarwal,a russell ,2,0,0,0,not out,none
+13.4, agarwal,a russell ,2,0,0,0,not out,none
+13.5, agarwal,a russell ,0,0,0,0,not out,none
+13.6, agarwal,a russell ,2,0,0,0,not out,none
+14.1, miller,kuldeep yadav ,0,0,0,0,not out,none
+14.2, miller,kuldeep yadav ,1,0,0,0,not out,none
+14.3, agarwal,kuldeep yadav ,2,0,0,0,not out,none
+14.4, agarwal,kuldeep yadav ,1,0,0,0,not out,none
+14.5, miller,kuldeep yadav ,4,0,0,0,not out,none
+14.6, miller,kuldeep yadav ,1,0,0,0,not out,none
+15.1, miller,chawla ,1,0,0,0,not out,none
+15.2, agarwal,chawla ,0,0,0,0,b,chawla 
+15.3, mandeep,chawla ,1,0,0,0,not out,none
+15.4, miller,chawla ,1,0,0,0,not out,none
+15.5, mandeep,chawla ,1,0,0,0,not out,none
+15.6, miller,chawla ,0,0,0,0,not out,none
+16.1, mandeep,ferguson ,6,0,0,0,not out,none
+16.2, mandeep,ferguson ,1,0,0,0,not out,none
+16.3, miller,ferguson ,4,0,0,0,not out,none
+16.4, miller,ferguson ,1,0,0,0,not out,none
+16.5, mandeep,ferguson ,2,0,0,0,not out,none
+16.6, mandeep,ferguson ,1,0,0,0,not out,none
+17.1, mandeep,prasidh ,0,0,0,0,not out,none
+17.2, mandeep,prasidh ,1,0,0,0,not out,none
+17.3, miller,prasidh ,4,0,0,0,not out,none
+17.4, miller,prasidh ,0,0,0,0,not out,none
+17.5, miller,prasidh ,1,0,0,0,not out,none
+17.6, mandeep,prasidh ,4,0,0,0,not out,none
+18.1, miller,ferguson ,1,1,0,0,not out,none
+18.2, mandeep,ferguson ,4,0,0,0,not out,none
+18.3, mandeep,ferguson ,1,0,0,0,not out,none
+18.4, miller,ferguson ,2,0,0,0,not out,none
+18.5, miller,ferguson ,6,0,0,0,not out,none
+18.6, miller,ferguson ,0,0,0,0,not out,none
+19.1, mandeep,chawla ,4,0,0,0,not out,none
+19.2, mandeep,chawla ,2,0,0,0,not out,none
+19.3, mandeep,chawla ,4,0,0,0,not out,none
+19.4, mandeep,chawla ,1,0,0,0,not out,none
+19.5, miller,chawla ,2,0,0,0,not out,none
+19.6, miller,chawla ,0,0,0,0,not out,none
