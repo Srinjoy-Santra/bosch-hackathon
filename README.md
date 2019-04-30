@@ -1,5 +1,6 @@
 # bosch-hackathon
-# CHECK UPDATE's README
+# CHECK UPDATE's README 
+# ANY FURTHER ISSUES RAISE IN THE ISSUES SECTION!! DON'T UPDATE README
 ML methods applied to running cricket commentary
 *****************************************************************************************************************************
   # UPDATES FROM DRAGNOTIC
