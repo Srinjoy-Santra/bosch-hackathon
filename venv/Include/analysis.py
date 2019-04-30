@@ -42,6 +42,23 @@ def best_batsman(bdf):
     m=max(list(scores.keys()))
     return [scores[m],m]
         
+def best_bowler(bdf):
+    scores=dict()
+    for i in bdf.itertuples():
+        score = 0
+        d=0
+        if i[4] is not 0:
+            if i[4] is 4:
+                d=4
+            elif i[4] is 5:
+                d=8
+            score += i[4]*10+i[2]*4 + d
+        else:
+            score += i[2]*4
+        scores[score]=i.bowler
+        
+    m=max(list(scores.keys()))
+    return [scores[m],m]
 
 # Importing dataset
 df = pd.read_csv('main.csv')
@@ -154,10 +171,9 @@ for row in df.itertuples():
         wicketslist.append(row.Index)
 
 # Plot runs vs balls
-plt.title('Progress of scores')
+plt.title('Progress of runs with each ball')
 plt.xlabel('Runs')
 plt.ylabel('Balls')
-plt.legend()
 plt.plot(runslist, df.index)
 plt.scatter([runslist[x] for x in wicketslist], wicketslist, c='red', label='dismissals')
 
@@ -225,6 +241,7 @@ DataBowlers = pd.DataFrame({'1': bowl, '2': overs, '3': maiden, '4': runs, '5': 
 Bowler_columns = ['bowler', 'overs', 'maiden', 'runs', 'wickets', 'NB', 'wide', 'eco']
 DataBowlers.columns = Bowler_columns
 DataBowlers.to_csv('bowler_stat.csv', index=False)
+best_baller = best_bowler(DataBowlers)
 
 # Bowling Facts
 '''   Highest Wicket Taker Taking into Consideration of their Economy rates  '''
@@ -251,6 +268,9 @@ for i in df['over']:
 import matplotlib.pyplot as plt2
 
 o = list(range(1, 21, 1))
+plt2.title('Run rate per over')
+plt2.xlabel('Overs')
+plt2.ylabel('Runrate')
 plt2.scatter(x=o, y=runrate, c='r')
 plt2.plot(o, runrate, c='b')
 plt.savefig('runrate.png')
