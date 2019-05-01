@@ -3,21 +3,18 @@ import matplotlib.pyplot as plt
 import re
 
 
-# from BowlingAnalysis import BowlingAnalysis
-
-
 def strike_rate(runs_scored, balls_faced):
-    return "%.2f" % ((runs_scored / balls_faced) * 100)
+    return "%.2f" % (( runs_scored / balls_faced ) * 100)
 
 
 def economy(runs_conceded, overs_balled):
-    return "%.2f" % (runs_conceded / overs_balled)
+    return "%.2f" % ( runs_conceded / overs_balled )
 
 
 def extract_ball_speeds():
     # Finding all the ball speeds
-    f = open(r'BOSCH_HACKATHON/Data.txt', "r+").read()
-    # print(f)
+    f = open('C:\\Users\\Swayamdipta Biswas\\Downloads\\Data.txt', "r+").read()
+    
     bowling_speeds = re.findall(pattern="[0-9]+[.][0-9]+km/h", string=f)
     print(bowling_speeds)
     m = max(bowling_speeds)
@@ -26,39 +23,11 @@ def extract_ball_speeds():
     f = f.split('\n')
     for i in f:
         if str(m) in i:
-            return [i.split(' ')[0], m]
+            return [i.split(' ')[0],m]
 
-def best_batsman(bdf):
-    scores=dict()
-    for i in bdf.itertuples():
-        score = float(i[3])*0.5+float(i[4])*0.5+i[5]*1
-        if i[3]>=100:
-            score +=8
-        elif i[3]>=50:
-            score+=4
-        scores[score]=i.batsman
+
     
-    #print(scores.get(58.5))
-    m=max(list(scores.keys()))
-    return [scores[m],m]
-        
-def best_bowler(bdf):
-    scores=dict()
-    for i in bdf.itertuples():
-        score = 0
-        d=0
-        if i[4] is not 0:
-            if i[4] is 4:
-                d=4
-            elif i[4] is 5:
-                d=8
-            score += i[4]*10+i[2]*4 + d
-        else:
-            score += i[2]*4
-        scores[score]=i.bowler
-        
-    m=max(list(scores.keys()))
-    return [scores[m],m]
+
 
 # Importing dataset
 df = pd.read_csv('main.csv')
@@ -70,17 +39,17 @@ print(economy(31, 4))
 '''
 fastest_bowler = extract_ball_speeds()
 
-# Calculating the final score
-total_runs = sum(df.run) + sum(df.wide)
+# Calculating the final score    
+total_runs = sum(df.run)+sum(df.wide)
 no_of_wickets = 0
 for verdict in df.out:
     if verdict is 'c' or verdict is 'b':
         no_of_wickets = no_of_wickets + 1
-overs = len(df.bowler) / 6
+overs = len(df.bowler)/6
 if overs > 20:
     overs = 20
-
-final_score = str(total_runs) + "-" + str(no_of_wickets) + " (" + str(overs) + ")"
+    
+final_score = str(total_runs)+"-"+str(no_of_wickets)+" ("+str(overs)+")"
 
 
 def get_name(name):
@@ -103,7 +72,6 @@ def get_name(name):
 def name_to_url(name):
     return "https://en.wikipedia.org/wiki/" + name.replace(" ", '_')
 
-
 # Fall of wickets calculation
 score = 0
 outs = 0
@@ -111,18 +79,18 @@ balls = 0
 fall_of_wickets = ''
 for row in df.itertuples():
     score = score + row.run
-    # if row.wide is not 1 or  row.nb is not 1 or row.lb is not 1:
+    
     balls = balls + 1
     if row.out is 'c' or row.out is 'b':
         outs = outs + 1
-        # balls = list_action[row.Index]
+        
 
-        fow = str(score) + '-' + str(outs) + " (" + get_name(row.batsman) + ", " + str(balls // 6) + '.' + str(
-            balls % 6) + "),"
+        fow = str(score)+'-'+str(outs)+" ("+ get_name(row.batsman) +", "+str(balls//6)+'.'+str(balls%6)+"),"
         print(fow)
         fall_of_wickets = fow + fall_of_wickets
+  
 
-# Batsman Table
+#Batsman Table
 batsman_stat = pd.DataFrame(columns=['batsman', 'dismissal',
                                      'R', 'B', '4s', '6s', 'SR'])
 
@@ -135,9 +103,9 @@ for batsman in batsmen:
     balls = 0
     dismissal = 'not out'
     for row in df.itertuples():
-
+        
         if batsman == row.batsman:
-            # print([batsman,row.batsman])
+            
             balls = balls + 1
             if row.out != 'not out':
                 dismissal = row.out_by
@@ -150,130 +118,120 @@ for batsman in batsmen:
             else:
                 runs += row.run
                 runs -= row.lb
-                # runs += row.wide
-
-    runs = runs + 4 * nfours + 6 * nsixes
-    nrow = [get_name(batsman), dismissal, runs, balls, nfours, nsixes, strike_rate(runs, balls)]
-    # print(nrow)
+                
+            
+    
+    runs = runs+4*nfours+6*nsixes
+    nrow = [get_name(batsman),dismissal,runs,balls,nfours,nsixes,strike_rate(runs,balls)]
+    
     batsman_stat.loc[len(batsman_stat)] = nrow
     count += 1
-
-batsman_stat.to_csv('batsman_stat.csv', index=False)
-best_batter = best_batsman(batsman_stat)
-
+    
+batsman_stat.to_csv('batsman_stat.csv',index=False)
+        
 runslist = []
 wicketslist = []
-ru = 0
+ru=0
 for row in df.itertuples():
     ru += row.run
     runslist.append(ru)
     if row.out != 'not out':
         wicketslist.append(row.Index)
+ 
 
 # Plot runs vs balls
-plt.title('Progress of runs with each ball')
+plt.title('Progress of scores')
 plt.xlabel('Runs')
 plt.ylabel('Balls')
-plt.plot(runslist, df.index)
-plt.scatter([runslist[x] for x in wicketslist], wicketslist, c='red', label='dismissals')
+plt.legend()
+plt.plot(runslist,df.index)
+plt.scatter([runslist[x] for x in wicketslist], wicketslist, c = 'red', label='dismissals')
 
-plt.savefig('run_vs_ball.png')
+plt.savefig('run_vs_ball.png')  
 plt.show()
-####
-'''  Bowling [over-complicated] analysis Part   '''
-'''
-bowlingObj=BowlingAnalysis(r'\BOSCH_HACKATHON\Data.txt')
-bestEconomyBowler=bowlingObj.bestEconomy_maxMaiden()
-bestFrameWicketTaker=bowlingObj.highestWicketTaker_bestEconomy()
-dataFrameBowling=bowlingObj.getBowlerScoreCard()
-bowlingObj.plotNetRunrate()
-print(dataFrameBowling)
-print(bestEconomyBowler)
-print(bestFrameWicketTaker)
-'''
-bowl, overs, maiden, runs, wickets, NB, wides, eco = list(), list(), list(), list(), list(), list(), list(), list()
-df2 = pd.DataFrame()
 
-i, lis, ll = 0, list(), list()
-lis.append(df.iloc[:, 2].values[0])
+bowl,overs,maiden,runs,wickets,NB,wides,eco=list(),list(),list(),list(),list(),list(),list(),list()
+df2=pd.DataFrame()
 
+
+i,lis,ll=0,list(),list()
+lis.append(df.iloc[:,2].values[0])
+        
 for i in df['bowler']:
-    if (i not in lis):
+    if(i not in lis):
         lis.append(i)
 
+       
 for i in lis:
-    counter = 0
-    m = 0
-    df2 = df.loc[df['bowler'] == i]
-    bowl.append(get_name(i.strip()))
-    overs.append(len(df2['bowler']) // 6)
+    counter=0
+    m=0
+    df2=df.loc[df['bowler'] == i]
+    bowl.append(i)
+    overs.append(len(df2['bowler'])//6)
     wides.append(sum(df2['wide']))
     NB.append(sum(df2['nb']))
-    wickets.append(len(df2.loc[df2['out'] != 'not out']['out']))
+    wickets.append(len(df2.loc[df2['out']!='not out']['out']))
     runs.append(sum(df2['run']))
-    eco.append((sum(df2['run'])) / (len(df2['bowler']) // 6))
-    h = int(df['over'].reshape(-1)[0])
-    r = 0
+    eco.append((sum(df2['run']))/(len(df2['bowler'])//6))
+    h=int(df['over'].reshape(-1)[0])
+    r=0
     for j in df2['over']:
-        # k=float(j)
-        if int(j) != 0 and (j <= float(int(j) + 0.6)) and (h % int(j) == 0):
-            r = r + df2['run'].reshape(-1)[m]
-            m = m + 1
-            h = int(j)
-        elif int(j) == 0:
-            if (j <= float(int(j) + 0.6)):
-                r = r + df2['run'].reshape(-1)[m]
-                m = m + 1
-                h = int(j)
-
+        #k=float(j)
+        if int(j)!=0 and (j<=float(int(j)+0.6)) and (h%int(j)==0):
+           r=r+df2['run'].reshape(-1)[m]
+           m=m+1
+           h=int(j)
+        elif int(j)==0:
+            if (j<=float(int(j)+0.6)):
+              r=r+df2['run'].reshape(-1)[m]
+              m=m+1
+              h=int(j)
+           
         else:
-            if r == 0:
-                counter = counter + 1
+            if r==0:
+                counter=counter+1
             else:
-                counter = 0
-            r = 0
-            r = r + df2['run'].reshape(-1)[m]
-            m = m + 1
-            h = int(j)
+                counter=0
+            r=0
+            r=r+df2['run'].reshape(-1)[m]
+            m=m+1
+            h=int(j)
     maiden.append(counter)
-
-DataBowlers = pd.DataFrame({'1': bowl, '2': overs, '3': maiden, '4': runs, '5': wickets, '6': NB, '7': wides, '8': eco})
-Bowler_columns = ['bowler', 'overs', 'maiden', 'runs', 'wickets', 'NB', 'wide', 'eco']
-DataBowlers.columns = Bowler_columns
-DataBowlers.to_csv('bowler_stat.csv', index=False)
-best_baller = best_bowler(DataBowlers)
+        
+              
+    
+DataBowlers=pd.DataFrame({ '1':bowl,'2':overs,'3':maiden,'4':runs,'5':wickets,'6':NB,'7':wides,'8':eco}) 
+Bowler_columns=['bowler','overs','maiden','runs','wickets','NB','wide','eco']
+DataBowlers.columns=Bowler_columns
+DataBowlers.to_csv('Bowler_Data.csv',index=False)
 
 # Bowling Facts
 '''   Highest Wicket Taker Taking into Consideration of their Economy rates  '''
-d = DataBowlers.loc[DataBowlers['wickets'] == max(DataBowlers['wickets'])]
-d = d.loc[d['eco'] == min(d['eco'])]
+d=DataBowlers.loc[DataBowlers['wickets']==max(DataBowlers['wickets'])]
+d=d.loc[d['eco']==min(d['eco'])]
 
 '''  Best Economy Rates  taking into consideration no. of maidens included   '''
-d2 = DataBowlers.loc[DataBowlers['eco'] == min(DataBowlers['eco'])]
-d2 = d2.loc[d2['maiden'] == max(d2['maiden'])]
+d2=DataBowlers.loc[DataBowlers['eco']==min(DataBowlers['eco'])]
+d2=d2.loc[d2['maiden']==max(d2['maiden'])]
 
-runrate = list()
-count, m, r = 1, 0, 0
+runrate=list()
+count,m,r=1,0,0
 for i in df['over']:
-    k = float(i)
-    if (k < float(int(k) + 0.6)):
-        r = r + df['run'].reshape(-1)[m]
-        m = m + 1
-
-    elif k == float(int(k) + 0.6):
-        r = r + df['run'].reshape(-1)[m]
-        m = m + 1
-        runrate.append(r / count)
-        count = count + 1
-import matplotlib.pyplot as plt2
-
-o = list(range(1, 21, 1))
-plt2.title('Run rate per over')
-plt2.xlabel('Overs')
-plt2.ylabel('Runrate')
-plt2.scatter(x=o, y=runrate, c='r')
-plt2.plot(o, runrate, c='b')
-plt.savefig('runrate.png')
+    k=float(i)
+    if(k<float(int(k)+0.6)):
+        r=r+df['run'].reshape(-1)[m]
+        m=m+1
+        
+    elif k==float(int(k)+0.6):
+       r=r+df['run'].reshape(-1)[m]
+       m=m+1
+       runrate.append(r/count)
+       count=count+1
+import matplotlib.pyplot as plt2       
+o=list(range(1,21,1))
+plt2.scatter(x=o,y=runrate,c='r')
+plt2.plot(o,runrate,c='b')
 plt2.show()
 
+  
 
