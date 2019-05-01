@@ -1,83 +1,25 @@
 # Bosch Hackathon
 
-# ANY FURTHER ISSUES RAISE IN THE ISSUES SECTION!! DON'T UPDATE README 
-
 ## List of contents
+* All relevant files are saved at [ven/Include](https://github.com/Srinjoy-Santra/bosch-hackathon/tree/master/venv/Include)
 * BOSCH_HACKATHON : contains all the original files provided by the question setter
-	* scorecard_mockup.html is made by the participating team to copy Scorecard_Format
+	* _Data.txt_ : Original raw data file of running commentary 
+	* _Instructions.pdf_ : Instrutions to the problem
+	* _Scorecard_format.png_ : Image of desired output
+	* _scorecard_mockup.html_ : Screen mockup of Scorecard_Format
+*  _code.py_ : Conversion of raw data file to csv format i.e __data.txt to main.csv__
+* _analysis.py_ : Data analysis from the main.csv dataset
+* _render.py_ : Render all the calculated  in scorecard format
+* _output.html_ : Scorecard and additional details
+* _main.csv_ : Curated dataset to store details of each ball
+* _batsman_stat.csv_ : Store details of batsmen as per table (1) of scorecard
+* _bowler_stat.csv_ : Store details of bowler as per table (2) of scorecard
 
 ## Plots
-* Image plot of runs versus balls
+* Image plot of runs versus balls [runs_vs_balls.png]
   * Red dots denote fall of wickets
 ![Runs versus balls](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/master/venv/Include/run_vs_ball.png)
-* Image plot of runrate per over
+* Image plot of runrate per over [runrate.png]
+	* Red dots denote start of over
 ![Runrate versus over](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/master/venv/Include/runrate.png)
- 
 
-=============================================================================================
-
-## TEAM ACTIVITY [To be deleted]
-
-### Dragonik's contribution
-- Preferably Make a new branch (e.g. new-update) from this branch (i.e update)
-- Make the dataframe for the bowler table 
-- [LINK to The actual scores for reference](https://www.cricbuzz.com/live-cricket-scorecard/22401/kkr-vs-kxip-6th-match-indian-premier-league-2019)
-- Also try extra qualities like max_six_scorer etc
-
-### Srinjoy's 
-- Make the dataframe for the batsman table
-- Find final score
-- Find fall of wickets
-
-# UPDATES FROM DRAGNOTIC
-### Todays Report:
-
-- Completed Bowler scoreboard.
-- Completed Bowling facts. 
-- Completed re-structurizing and optimising the code
-# UPDATES FROM DRAGNOTIC 2
-### About the Codes:
-- codexyzClasses.py ==> For Data Preprocessing (Contributor : Dragnotic)
-- codexyzClasses2.py ==> For Data Processing (Contributoor : Srinjoy)
-- codexyzBowlingAnalysis ==> For Data Analysis on Bowling (contributor : Dragnotic)
-
-### ISSUES
-- Unexpected Error: in codexyzclasses2.py (GOD KNOWS WHY? SEEMS PERFECTLY FINE TO ME)
-- Required to go through the code and fix the error (idk what)
-
-### UPDATES FROM Srinjoy
-- Combined analysis with render to get output html
-- Dragnotic is informed the 100th time to remove those unnecessary class features
--- Look at Srinjoy's analysis.py code and try to bring it to the same format to maintain sanity, uniformity and cooperation
- 
- # UPDATES FROM DRAGNOTIC
-### Todays Report:
-
-- Completed Bowler scoreboard.
-- Completed Bowling facts. 
-- Completed re-structurizing and optimising the code
-
-# UPDATES FROM DRAGNOTIC
-### About the Codes:
-- codexyzClasses.py ==> For Data Preprocessing (Contributor : Dragnotic)
-- codexyzClasses2.py ==> For Data Processing (Contributoor : Srinjoy)
-- codexyzBowlingAnalysis ==> For Data Analysis on Bowling (contributor : Dragnotic)
-
-### ISSUES
-- Unexpected Error: in codexyzclasses2.py (GOD KNOWS WHY? SEEMS PERFECTLY FINE TO ME)
-- Required to go through the code and fix the error (idk what)
-### 3rd Update
-- For Class less follow codexyz.py
-- For Classfull follow codexyzBowlingAnalysis.py
-
-### NOTE
-- xyzCODE.py is analysis.py
-### Dragnotic's 4th Update:
-- weight.py is the weighted BowlingScore Card
-- WeightedBowlingScoreBoard.csv had the file 
-
-# FILES WE NEED:
-## From outside the venv
-#### - code.py
-#### - xyzCODE.py
-#### - weight.py
