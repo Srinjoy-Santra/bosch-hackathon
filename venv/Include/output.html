@@ -13,19 +13,25 @@
             th {
                 background-color: lightgray;
                 font-weight: bold;
+                margin:5px;
             }
             td{
                 border-bottom: 0.5px solid lightgray;
+                margin:5px;
             }
             caption {
                 background-color: black;
                 color: aliceblue;
-                padding: 4px;
+                padding: 10px;
                 font-family: monospace;
             }
-            caption > span {
-                justify-content: flex-end;
-            }
+            div{
+                padding:10px;
+                margin:10px;
+                }
+            .flex-container{
+				display:flex;
+			}
         </style>
     </head>
     
@@ -44,18 +50,18 @@
             <th>6s</th>
             <th>SR</th>
             </tr>
-            <tr><td><a href='https://en.wikipedia.org/wiki/Lokesh_Rahul'>Lokesh Rahul</a></td><td>c Kuldeep b Ferguson</td><td>1</td><td>5</td><td>0</td><td>0</td><td>20.00</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Chris_Gayle'>Chris Gayle</a></td><td>c Prasidh b A russell</td><td>20</td><td>13</td><td>0</td><td>0</td><td>153.85</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Mayank_Agarwal'>Mayank Agarwal</a></td><td>chawla </td><td>58</td><td>34</td><td>0</td><td>0</td><td>170.59</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Sarfaraz_Khan'>Sarfaraz Khan</a></td><td>c Karthik b A russell</td><td>13</td><td>13</td><td>0</td><td>0</td><td>100.00</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/David_Miller'>David Miller</a></td><td>not out</td><td>59</td><td>40</td><td>0</td><td>0</td><td>147.50</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Mandeep_Singh'>Mandeep Singh</a></td><td>not out</td><td>33</td><td>15</td><td>0</td><td>0</td><td>220.00</td>
+            <tr><td><a href='https://en.wikipedia.org/wiki/Lokesh_Rahul' style='color:#2279FC;font-size:18'>Lokesh Rahul</a></td><td>c Kuldeep b Ferguson</td><td>1</td><td>5</td><td>0</td><td>0</td><td>20.00</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Chris_Gayle' style='color:#2279FC;font-size:18'>Chris Gayle</a></td><td>c Prasidh b A russell</td><td>20</td><td>13</td><td>0</td><td>0</td><td>153.85</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Mayank_Agarwal' style='color:#2279FC;font-size:18'>Mayank Agarwal</a></td><td>chawla </td><td>58</td><td>34</td><td>0</td><td>0</td><td>170.59</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Sarfaraz_Khan' style='color:#2279FC;font-size:18'>Sarfaraz Khan</a></td><td>c Karthik b A russell</td><td>13</td><td>13</td><td>0</td><td>0</td><td>100.00</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/David_Miller' style='color:#2279FC;font-size:18'>David Miller</a></td><td>not out</td><td>59</td><td>40</td><td>0</td><td>0</td><td>147.50</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Mandeep_Singh' style='color:#2279FC;font-size:18'>Mandeep Singh</a></td><td>not out</td><td>33</td><td>15</td><td>0</td><td>0</td><td>220.00</td>
 </tr>
         </table>
         <table>
             <tr><th>Fall of Wickets</th></tr>
             <tr>
-                <td>130-4 (IPL, 15.2),58-3 (IPL, 7.3),35-2 (IPL, 4.2),11-1 (IPL, 1.4),</td>
+                <td>130-4 (Mayank Agarwal, 15.2),58-3 (Sarfaraz Khan, 7.3),35-2 (Chris Gayle, 4.2),11-1 (Lokesh Rahul, 1.4),</td>
             </tr>
         </table>
         <table>
@@ -69,26 +75,44 @@
                 <th>WD</th>
                 <th>ECO</th>
             </tr>
-            <tr><td><a href='https://en.wikipedia.org/wiki/Prasidh_Krishna'>Prasidh Krishna</a></td><td>4</td><td>0</td><td>41</td><td>0</td><td>0</td><td>1</td><td>1.71</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Lockie_Ferguson'>Lockie Ferguson</a></td><td>4</td><td>0</td><td>40</td><td>1</td><td>0</td><td>2</td><td>1.67</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Andre_Russell'>Andre Russell</a></td><td>3</td><td>0</td><td>21</td><td>2</td><td>0</td><td>0</td><td>1.17</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Kuldeep_Yadav'>Kuldeep Yadav</a></td><td>4</td><td>0</td><td>30</td><td>0</td><td>0</td><td>2</td><td>1.25</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Sunil_Narine'>Sunil Narine</a></td><td>2</td><td>0</td><td>26</td><td>0</td><td>0</td><td>0</td><td>2.17</td>
-</tr><tr><td><a href='https://en.wikipedia.org/wiki/Piyush_Chawla'>Piyush Chawla</a></td><td>3</td><td>0</td><td>27</td><td>1</td><td>0</td><td>0</td><td>1.50</td>
+            <tr><td><a href='https://en.wikipedia.org/wiki/Prasidh_Krishna' style='color:#2279FC;font-size:18'>Prasidh Krishna</a></td><td>4</td><td>0</td><td>41</td><td>0</td><td>0</td><td>1</td><td>1.71</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Lockie_Ferguson' style='color:#2279FC;font-size:18'>Lockie Ferguson</a></td><td>4</td><td>0</td><td>40</td><td>1</td><td>0</td><td>2</td><td>1.67</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Andre_Russell' style='color:#2279FC;font-size:18'>Andre Russell</a></td><td>3</td><td>0</td><td>21</td><td>2</td><td>0</td><td>0</td><td>1.17</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Kuldeep_Yadav' style='color:#2279FC;font-size:18'>Kuldeep Yadav</a></td><td>4</td><td>0</td><td>30</td><td>0</td><td>0</td><td>2</td><td>1.25</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Sunil_Narine' style='color:#2279FC;font-size:18'>Sunil Narine</a></td><td>2</td><td>0</td><td>26</td><td>0</td><td>0</td><td>0</td><td>2.17</td>
+</tr><tr><td><a href='https://en.wikipedia.org/wiki/Piyush_Chawla' style='color:#2279FC;font-size:18'>Piyush Chawla</a></td><td>3</td><td>0</td><td>27</td><td>1</td><td>0</td><td>0</td><td>1.50</td>
 </tr>
         </table>
-        <h3>Trivia</h3>
-        <b>
-        <blockquote>Fastest Ball by Prasidh Krishna with a speed of 149.2km/h </blockquote>     
-        <blockquote>Best Hitter David Miller scoring 53.5 points</blockquote>     
-        <blockquote>Best Thrower Prasidh Krishna scoring 42.6 points</blockquote>     
-          
-        <blockquote>Most Tweeted player of the innings David Miller</blockquote> 
-        </b> 
+       
+        <div class="flex-container">
+		<img src="https://seeklogo.com/images/I/ipl-kings-xi-punjab-logo-6747D5C02B-seeklogo.com.png" alt='kxip' />
+		
+		<div>
+			<h3>Trivia</h3>
+			<b>
+			<blockquote>Fastest Ball by Prasidh Krishna with a speed of 149.2km/h </blockquote>     
+			<blockquote>Best Hitter David Miller scoring 53.5 points</blockquote>     
+			<blockquote>Best Thrower Prasidh Krishna scoring 42.6 points</blockquote>     
+			  
+			<blockquote>Most Tweeted player of the innings David Miller</blockquote> 
+			</b>
+		</div>
+		<img src="https://seeklogo.com/images/K/kolkata-knight-riders-logo-532F9512B0-seeklogo.com.jpg" alt='kkr' />
+		</div>
+		
+		
+		
+		
         <br/>
-        <img src="run_vs_ball.png" alt='runs vs balls'/>
-        <img src="runrate.png" alt='run rate'/>
-        <p>Red dot in IMG(1) denotes fall of wickets; in IMG(2) denotes end of overs</p>
+		<p style="color: red"; font-size="12px; float:center-right">Red dot in IMG(1) denotes fall of wickets; in IMG(2) denotes end of overs</p>
+		<div class="flex-container">
+			<img src="run_vs_ball.png" alt='runs vs balls'/>
+			<img src="runrate.png" alt='run rate'/>
+			
+		<div/>
+		
+
+        
     </body>
 
 </html>

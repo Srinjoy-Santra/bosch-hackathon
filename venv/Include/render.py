@@ -13,7 +13,7 @@ def add_stat(stat):
     tr = ""
     for row in stat.itertuples():
         tr = tr + "<tr>"
-        tr = tr + "<td><a href='" + an.name_to_url(str(row[1])) + "'>"+str(row[1])+"</a></td>"
+        tr = tr + "<td><a href='" + an.name_to_url(str(row[1])) + "' style='color:#2279FC;font-size:18'>"+str(row[1])+"</a></td>"
         for data in row[2:]:
             tr = tr + "<td>" + str(data) + "</td>"
         tr = tr + "\n</tr>"
@@ -58,18 +58,36 @@ body = """
             </tr>
             """ + add_stat(bowler_stat) + """
         </table>
-        <h3>Trivia</h3>
-        <b>
-        <blockquote>Fastest Ball by """+an.get_name(an.fastest_bowler[0].strip().lower())+" with a speed of "+str(an.fastest_bowler[1])+""" </blockquote>     
-        <blockquote>Best Hitter """+an.best_batter[0]+" scoring "+str(an.best_batter[1])+""" points</blockquote>     
-        <blockquote>Best Thrower """+an.best_baller[0]+" scoring "+str(an.best_baller[1]/10)+""" points</blockquote>     
-          
-        <blockquote>Most Tweeted player of the innings """+an.get_name(cd.find_most_tweet()[0])+"""</blockquote> 
-        </b> 
+       
+        <div class="flex-container">
+		<img src="https://seeklogo.com/images/I/ipl-kings-xi-punjab-logo-6747D5C02B-seeklogo.com.png" alt='kxip' />
+		
+		<div>
+			<h3>Trivia</h3>
+			<b>
+			<blockquote>Fastest Ball by Prasidh Krishna with a speed of 149.2km/h </blockquote>     
+			<blockquote>Best Hitter David Miller scoring 53.5 points</blockquote>     
+			<blockquote>Best Thrower Prasidh Krishna scoring 42.6 points</blockquote>     
+			  
+			<blockquote>Most Tweeted player of the innings David Miller</blockquote> 
+			</b>
+		</div>
+		<img src="https://seeklogo.com/images/K/kolkata-knight-riders-logo-532F9512B0-seeklogo.com.jpg" alt='kkr' />
+		</div>
+		
+		
+		
+		
         <br/>
-        <img src="run_vs_ball.png" alt='runs vs balls'/>
-        <img src="runrate.png" alt='run rate'/>
-        <p>Red dot in IMG(1) denotes fall of wickets; in IMG(2) denotes end of overs</p>
+		<p style="color: red"; font-size="12px; float:center-right">Red dot in IMG(1) denotes fall of wickets; in IMG(2) denotes end of overs</p>
+		<div class="flex-container">
+			<img src="run_vs_ball.png" alt='runs vs balls'/>
+			<img src="runrate.png" alt='run rate'/>
+			
+		<div/>
+		
+
+        
     </body>
 """
 
@@ -88,19 +106,25 @@ head = """<html>
             th {
                 background-color: lightgray;
                 font-weight: bold;
+                margin:5px;
             }
             td{
                 border-bottom: 0.5px solid lightgray;
+                margin:5px;
             }
             caption {
                 background-color: black;
                 color: aliceblue;
-                padding: 4px;
+                padding: 10px;
                 font-family: monospace;
             }
-            caption > span {
-                justify-content: flex-end;
-            }
+            div{
+                padding:10px;
+                margin:10px;
+                }
+            .flex-container{
+				display:flex;
+			}
         </style>
     </head>
     """ + body + """

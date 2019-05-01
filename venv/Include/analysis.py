@@ -110,7 +110,7 @@ for row in df.itertuples():
         outs = outs + 1
         # balls = list_action[row.Index]
 
-        fow = str(score) + '-' + str(outs) + " (" + get_name(row.batsman) + ", " + str(balls // 6) + '.' + str(
+        fow = str(score) + '-' + str(outs) + " (" + get_name(row.batsman.strip()) + ", " + str(balls // 6) + '.' + str(
             balls % 6) + "),"
         print(fow)
         fall_of_wickets = fow + fall_of_wickets
