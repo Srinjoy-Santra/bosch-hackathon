@@ -204,7 +204,7 @@ for i in lis:
 DataBowlers=pd.DataFrame({ '1':bowl,'2':overs,'3':maiden,'4':runs,'5':wickets,'6':NB,'7':wides,'8':eco}) 
 Bowler_columns=['bowler','overs','maiden','runs','wickets','NB','wide','eco']
 DataBowlers.columns=Bowler_columns
-DataBowlers.to_csv('Bowler_Data.csv',index=False)
+DataBowlers.to_csv('bowler_stat.csv',index=False)
 
 # Bowling Facts
 '''   Highest Wicket Taker Taking into Consideration of their Economy rates  '''
