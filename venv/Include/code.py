@@ -1,6 +1,9 @@
-import re
 import pandas as pd
-import matplotlib.pyplot as plt
+import re
+import nltk
+nltk.download('stopwords')
+from nltk.corpus import   stopwords
+
 
 file = open(r'BOSCH_HACKATHON\Data.txt')
 list_all_lines, list_over_deliveries, list_action, list_in_btwn_overs, list_action_otherwise = list(), list(), list(), list(), list()
@@ -183,6 +186,7 @@ df = pd.DataFrame(
 df.columns = df_columns
 df.to_csv('main.csv', index=False)
 
+#Finding Top Tweeted Player
 tweets = []
 for row in list_other_combined:
     say = row.split(' ')
@@ -193,3 +197,23 @@ for row in list_other_combined:
             tweets.append(row)
     except:
         pass
+    
+def find_most_tweet():
+    player_mentions = {'gayle':0,'russell':0,'narine':0,'miller':0}
+    top=[]
+    for tweet in tweets:
+        tweet = re.sub('[^a-zA-Z]', ' ', tweet)
+        tweet = tweet.lower()
+        tweet = tweet.split()
+        tweet = [word for word in tweet if not word in set(stopwords.words('english'))]
+        
+        for word in list(set(tweet)):
+            for player in player_mentions:
+                if(player == word):
+                    player_mentions[player] +=1
+        
+    m=max(list(player_mentions.values()))
+    for key in player_mentions:
+        if player_mentions[key] is m:
+           top.append(key) 
+    return top

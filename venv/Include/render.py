@@ -1,5 +1,7 @@
 import analysis as an
+import code as cd
 import pandas as pd
+
 
 team_innings = "King's IX Punjab" + " Innings"
 #final_score = "181-3(20)"
@@ -72,11 +74,13 @@ body = """
         <blockquote>Fastest Ball by """+an.get_name(an.fastest_bowler[0].strip().lower())+" with a speed of "+str(an.fastest_bowler[1])+""" </blockquote>     
         <blockquote>Best Hitter """+an.best_batter[0]+" scoring "+str(an.best_batter[1])+""" points</blockquote>     
         <blockquote>Best Thrower """+an.best_baller[0]+" scoring "+str(an.best_baller[1]/10)+""" points</blockquote>     
-         </b>  
-        <blockquote>Did you really expect one more?</blockquote> 
-        <br/>    
+          
+        <blockquote>Most Tweeted player of the innings """+an.get_name(cd.find_most_tweet()[0])+"""</blockquote> 
+        </b> 
+        <br/>
         <img src="run_vs_ball.png" alt='runs vs balls'/>
         <img src="runrate.png" alt='run rate'/>
+        <p>Red dot in IMG(1) denotes fall of wickets; in IMG(2) denotes end of overs</p>
     </body>
 """
 

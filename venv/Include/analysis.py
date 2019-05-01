@@ -85,12 +85,12 @@ final_score = str(total_runs) + "-" + str(no_of_wickets) + " (" + str(overs) + "
 
 def get_name(name):
     return {
-        ' rahul': 'Lokesh Rahul',
-        ' gayle': 'Chris Gayle',
-        ' agarwal': 'Mayank Agarwal',
-        ' sarfaraz khan': 'Sarfaraz Khan',
-        ' miller': 'David_Miller',
-        ' mandeep': 'Mandeep Singh',
+        'rahul': 'Lokesh Rahul',
+        'gayle': 'Chris Gayle',
+        'agarwal': 'Mayank Agarwal',
+        'sarfaraz khan': 'Sarfaraz Khan',
+        'miller': 'David Miller',
+        'mandeep': 'Mandeep Singh',
         'ferguson': 'Lockie Ferguson',
         'a russell': 'Andre Russell',
         'chawla': 'Piyush Chawla',
@@ -153,7 +153,7 @@ for batsman in batsmen:
                 # runs += row.wide
 
     runs = runs + 4 * nfours + 6 * nsixes
-    nrow = [get_name(batsman), dismissal, runs, balls, nfours, nsixes, strike_rate(runs, balls)]
+    nrow = [get_name(batsman.strip()), dismissal, runs, balls, nfours, nsixes, strike_rate(runs, balls)]
     # print(nrow)
     batsman_stat.loc[len(batsman_stat)] = nrow
     count += 1
@@ -181,16 +181,7 @@ plt.savefig('run_vs_ball.png')
 plt.show()
 ####
 '''  Bowling [over-complicated] analysis Part   '''
-'''
-bowlingObj=BowlingAnalysis(r'\BOSCH_HACKATHON\Data.txt')
-bestEconomyBowler=bowlingObj.bestEconomy_maxMaiden()
-bestFrameWicketTaker=bowlingObj.highestWicketTaker_bestEconomy()
-dataFrameBowling=bowlingObj.getBowlerScoreCard()
-bowlingObj.plotNetRunrate()
-print(dataFrameBowling)
-print(bestEconomyBowler)
-print(bestFrameWicketTaker)
-'''
+
 bowl, overs, maiden, runs, wickets, NB, wides, eco = list(), list(), list(), list(), list(), list(), list(), list()
 df2 = pd.DataFrame()
 
@@ -211,7 +202,7 @@ for i in lis:
     NB.append(sum(df2['nb']))
     wickets.append(len(df2.loc[df2['out'] != 'not out']['out']))
     runs.append(sum(df2['run']))
-    eco.append((sum(df2['run'])) / (len(df2['bowler']) // 6))
+    eco.append(economy(sum(df2['run']),len(df2['bowler'])))#(sum(df2['run'])) / (len(df2['bowler']) // 6)
     h = int(df['over'].reshape(-1)[0])
     r = 0
     for j in df2['over']:
