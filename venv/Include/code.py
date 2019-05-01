@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-file = open(r'C:\\Users\\Swayamdipta Biswas\\Downloads\\Data.txt')
+file = open(r'C:\Users\nEW u\PycharmProjects\bosch\venv\Include\BOSCH_HACKATHON\Data.txt')
 list_all_lines, list_over_deliveries, list_action, list_in_btwn_overs, list_action_otherwise = list(), list(), list(), list(), list()
 for line in reversed(file.readlines()):
     list_all_lines.append(line.rstrip().lower())
