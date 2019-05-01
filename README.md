@@ -51,4 +51,4 @@
 - For Class less follow codexyz.py
 - For Classfull follow codexyzBowlingAnalysis.py
 ![Runs versus balls](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/update/[BoschProjrct]RunrateVSovers.png)
-![Runs versus balls](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/master/venv/Include/Output2[Image].png)
+![Runs versus balls](https://github.com/Srinjoy-Santra/bosch-hackathon/blob/update/venv/Include/Output2[Image].png)
