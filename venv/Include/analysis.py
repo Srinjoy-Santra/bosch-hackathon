@@ -1,4 +1,3 @@
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
@@ -9,7 +8,7 @@ def strike_rate(runs_scored, balls_faced):
 
 
 def economy(runs_conceded, overs_balled):
-    return runs_conceded / overs_balled
+    return "%.2f" % (runs_conceded / overs_balled)
 
 
 def extract_ball_speeds():
@@ -17,9 +16,9 @@ def extract_ball_speeds():
     f = open(r'BOSCH_HACKATHON/Data.txt', "r+").read()
     # print(f)
     bowling_speeds = re.findall(pattern="[0-9]+[.][0-9]+km/h", string=f)
-    print(bowling_speeds)
+    #print(bowling_speeds)
     m = max(bowling_speeds)
-    print(m)
+    #print(m)
 
     f = f.split('\n')
     for i in f:
@@ -134,7 +133,7 @@ for batsman in batsmen:
             balls = balls + 1
             if row.out != 'not out':
                 dismissal = row.out_by
-                print(row.out)
+                # print(row.out)
                 break
             if row.run is 6:
                 nsixes += 1
@@ -152,6 +151,7 @@ for batsman in batsmen:
     count += 1
 
 batsman_stat.to_csv('batsman_stat.csv', index=False)
+print(batsman_stat)
 best_batter = best_batsman(batsman_stat)
 fastest_bowler = extract_ball_speeds()
 
@@ -173,8 +173,9 @@ plt.scatter([runslist[x] for x in wicketslist], wicketslist, c='red', label='dis
 
 plt.savefig('run_vs_ball.png')
 plt.show()
+
 ####
-'''  Bowling [over-complicated] analysis Part   '''
+'''  Bowling analysis Part   '''
 
 bowl, overs, maiden, runs, wickets, NB, wides, eco = list(), list(), list(), list(), list(), list(), list(), list()
 df2 = pd.DataFrame()
@@ -195,9 +196,9 @@ for i in lis:
     wides.append(sum(df2['wide']))
     NB.append(sum(df2['nb']))
     wickets.append(len(df2.loc[df2['out'] != 'not out']['out']))
-    runs.append(sum(df2['run']))
-    
-    eco.append(economy(sum(df2['run'])+ +sum(df2['wide']), len(df2['bowler'])/6))
+    runs.append(sum(df2['run']) + sum(df2['wide']))
+
+    eco.append(economy(sum(df2['run']) + sum(df2['wide']), len(df2['bowler']) // 6))
     h = int(df['over'].reshape(-1)[0])
     r = 0
     for j in df2['over']:
@@ -262,5 +263,6 @@ plt2.scatter(x=o, y=runrate, c='r')
 plt2.plot(o, runrate, c='b')
 plt.savefig('runrate.png')
 plt2.show()
+
 
 

@@ -1,6 +1,7 @@
 # Bosch Hackathon
 
 ## List of contents
+* _index.html_ : Final output for display (copy of output.html) [View live](https://srinjoy-santra.github.io/bosch-hackathon/)
 * All relevant files are saved at [ven/Include](https://github.com/Srinjoy-Santra/bosch-hackathon/tree/master/venv/Include)
 * BOSCH_HACKATHON : contains all the original files provided by the question setter
 	* _Data.txt_ : Original raw data file of running commentary 

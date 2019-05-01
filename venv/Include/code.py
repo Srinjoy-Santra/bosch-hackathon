@@ -128,7 +128,7 @@ for row in list_other_combined:
     say = row.split(' ')
 
     try:
-        print(say[1])
+        #print(say[1])
         if say[1] == 'says:' or say[2] == 'says:':
             tweets.append(row)
     except:
