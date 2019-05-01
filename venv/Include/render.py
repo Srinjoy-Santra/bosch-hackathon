@@ -4,20 +4,9 @@ import pandas as pd
 
 
 team_innings = "King's IX Punjab" + " Innings"
-#final_score = "181-3(20)"
 batsman_stat = an.batsman_stat
-
-bowler_stat = pd.read_csv('bowler_stat.csv')
-# print(bowler_stat['bowler'])
-# bowler_stat['bowler'] = (bowler_stat['bowler']).lstrip()#(str(x).lstrip() for x in bowler_stat['bowler'])
-
-'''
-pd.DataFrame(data=[['Prasidh Krishna', 4, 0, 31, 0, 1, 2, 7.75],
-                                 ['Piyush Chawla', 3, 0, 23, 1, 0, 0, 7.67]],
-                           columns=['bowler', 'O', 'M', 'R', 'W', 'NB', 'WD', 'ECO'])
-'''
+bowler_stat = an.DataBowlers
 fall_of_wickets = an.fall_of_wickets
-# print(batsman_stat)
 
 
 def add_stat(stat):
@@ -118,10 +107,7 @@ head = """<html>
 </html>
 """
 
-# print(add_batsman_stat(batsman_stat))
-print(head)
-
+# Creating the HTML output file
 f = open('output.html', "w+")
 f.write(head)
 
-print(bowler_stat)

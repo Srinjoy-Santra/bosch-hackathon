@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="847888df-6b1f-42af-871c-dfc36fd5f373" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Include/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/bowler_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/bowler_stat.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Include/code.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/output.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Include/render.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/render.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="render.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/Include/render.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="82" column="79" lean-forward="true" selection-start-line="82" selection-start-column="79" selection-end-line="82" selection-end-column="79" />
+            <state relative-caret-position="127">
+              <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -44,7 +43,13 @@
       <find>sun</find>
       <find>bowler_</find>
       <find>get_name</find>
+      <find>i</find>
+      <find>float</find>
     </findStrings>
+    <replaceStrings>
+      <replace>bat</replace>
+      <replace>bal</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -432,13 +437,6 @@
     <entry file="file://$PROJECT_DIR$/venv/Include/Bowler_Data.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3487">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Include/batsman_stat.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -459,23 +457,30 @@
     <entry file="file://$PROJECT_DIR$/venv/Include/run_vs_ball.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/main.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Include/output.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Include/main.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Include/code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="151" column="26" lean-forward="true" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Include/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="265" lean-forward="true" selection-start-line="265" selection-end-line="265" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Include/render.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="82" column="79" lean-forward="true" selection-start-line="82" selection-start-column="79" selection-end-line="82" selection-end-column="79" />
+        <state relative-caret-position="127">
+          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
         </state>
       </provider>
     </entry>

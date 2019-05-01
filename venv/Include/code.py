@@ -1,3 +1,4 @@
+
 import pandas as pd
 import re
 import nltk
@@ -33,7 +34,7 @@ for i in list_all_lines:
 list_other_combined = list(set(list_action_otherwise + list_in_btwn_overs))
 l = list()
 for i in list_other_combined:
-    if (i != ''):
+    if i != '':
         l.append(i)
 list_other_combined = l
 del l
@@ -55,37 +56,19 @@ hasWide = False
 for i in range(0, len(list_action)):
     lsplit = list_action[i].split(',')
 
-    # if wide[-1] is 1 and run[-1] is not 1:
-    # lsplit = list_action[i-1].split(',')
     w = r = l = nb = 0
     lo = 'none'
     ou = 'not out'
 
-    if ('wide' in lsplit[1]):
+    if 'wide' in lsplit[1]:
         w = 1
         r = 1
         hasWide = True
-        '''
-        wide.append(1)
-        lout.append('none')
-        run.append(1)
-        lb.append(0)
-        out.append('not out')
-        no_ball.append(0)
-        '''
 
-
-    elif ('leg byes' in lsplit[1]):
+    elif 'leg byes' in lsplit[1]:
         l = 1
         r = dictionary1[lsplit[2].strip()]
-        '''
-        lb.append(1)
-        run.append(dictionary1[lsplit[2].strip()])
-        out.append('not out')
-        lout.append('none')
-        wide.append(0)
-        no_ball.append(0)
-        '''
+
     elif 'out' in lsplit[1]:
 
         v = lsplit[1].split('!')[0].split(' ')
@@ -93,14 +76,7 @@ for i in range(0, len(list_action)):
         if 'bowled' == v[2]:
             ou = dictionary1[v[2]]
             lo = lsplit[0].split('to')[0]
-            '''
-            out.append(dictionary1[v[2]])
-            run.append(0)
-            wide.append(0)
-            lb.append(0)
-            no_ball.append(0)
-            lout.append(lsplit[0].split('to')[0])
-            '''
+
         elif 'caught' == v[2]:
             ou = dictionary1[v[2]]
 
@@ -110,41 +86,15 @@ for i in range(0, len(list_action)):
                 name = name + " " + bowlern[1]
 
             lo = "c " + v[4].capitalize() + " b " + name.capitalize()
-            '''
-            out.append(dictionary1[v[2]])
-            run.append(0)
-            wide.append(0)
-            lb.append(0)
-            no_ball.append(0)
-            lout.append("c " + v[4] + " b " + name)
-            '''
 
         # NO LBWs FOUND!!NO RUN OUTS FOUND!!
 
     elif 'no ball' in lsplit[1]:
         nb = 1
-        '''
-        no_ball.append(1)
-        out.append('not out')
-        run.append(0)
-        wide.append(0)
-        lb.append(0)
-        lout.append('none')
-        '''
 
     else:
         r = dictionary1[lsplit[1].strip()]
-        '''
-        wide.append(0)
-        lb.append(0)
-        out.append('not out')
-        lout.append('none')
-        run.append(dictionary1[lsplit[1].strip()])
-        no_ball.append(0)
-        w=r=l=nb=0
-        lo='none'
-        ou='not out'
-        '''
+
     if w is not 1:
         batsman.append(lsplit[0].split('to')[1])
         bowler.append(lsplit[0].split('to')[0])
@@ -159,26 +109,12 @@ for i in range(0, len(list_action)):
         out.append(ou)
         hasWide = False
 
-    # print([batsman[-1],bowler[-1],run[-1],wide[-1],lb[-1],no_ball[-1],out[-1],lout[-1]])
-
-'''data=pd.DataFrame()
-data['Batsman']=batsman()
-data['Bowler']=bowler()
-data['Run']=run()
-data['Wide']=wide()
-data['LB']=lb()
-data['NB']=no_ball()
-data['Out']=out()
-data['Out By']=  ()'''
-
-# print(batsman,'\n\t',bowler,'\n\t',run,'\n\t',wide,'\n\t',lb,'\n\t',no_ball,'\n\t',out,'\n\t',lout)
-
 # Creating the dataset
 i, lis = 0, list()
 lis.append(list_over_deliveries[0])
 
 for i in list_over_deliveries:
-    if (i not in lis):
+    if i not in lis:
         lis.append(i)
 df_columns = ['over', 'batsman', 'bowler', 'run', 'wide', 'lb', 'nb', 'out', 'out_by']
 df = pd.DataFrame(
@@ -198,9 +134,10 @@ for row in list_other_combined:
     except:
         pass
     
+
 def find_most_tweet():
-    player_mentions = {'gayle':0,'russell':0,'narine':0,'miller':0}
-    top=[]
+    player_mentions = {'gayle': 0, 'russell': 0, 'narine': 0, 'miller': 0}
+    top = []
     for tweet in tweets:
         tweet = re.sub('[^a-zA-Z]', ' ', tweet)
         tweet = tweet.lower()
@@ -209,7 +146,7 @@ def find_most_tweet():
         
         for word in list(set(tweet)):
             for player in player_mentions:
-                if(player == word):
+                if player == word:
                     player_mentions[player] +=1
         
     m=max(list(player_mentions.values()))

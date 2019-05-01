@@ -1,9 +1,7 @@
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
-
-
-# from BowlingAnalysis import BowlingAnalysis
 
 
 def strike_rate(runs_scored, balls_faced):
@@ -28,47 +26,42 @@ def extract_ball_speeds():
         if str(m) in i:
             return [i.split(' ')[0], m]
 
+
 def best_batsman(bdf):
-    scores=dict()
-    for i in bdf.itertuples():
-        score = float(i[3])*0.5+float(i[4])*0.5+i[5]*1
-        if i[3]>=100:
-            score +=8
-        elif i[3]>=50:
-            score+=4
-        scores[score]=i.batsman
-    
-    #print(scores.get(58.5))
-    m=max(list(scores.keys()))
-    return [scores[m],m]
-        
+    scores = dict()
+    for bat in bdf.itertuples():
+        score = float(bat[3])*0.5+float(bat[4])*0.5+bat[5]*1
+        if bat[3] >= 100:
+            score += 8
+        elif bat[3] >= 50:
+            score += 4
+        scores[score] = bat.batsman
+
+    m = max(list(scores.keys()))
+    return [scores[m], m]
+
+
 def best_bowler(bdf):
-    scores=dict()
-    for i in bdf.itertuples():
+    scores = dict()
+    for bal in bdf.itertuples():
         score = 0
-        d=0
-        if i[4] is not 0:
-            if i[4] is 4:
-                d=4
-            elif i[4] is 5:
-                d=8
-            score += i[4]*10+i[2]*4 + d
+        d = 0
+        if bal[4] is not 0:
+            if bal[4] is 4:
+                d = 4
+            elif bal[4] is 5:
+                d = 8
+            score += bal[4]*10+bal[2]*4 + d
         else:
-            score += i[2]*4
-        scores[score]=i.bowler
+            score += bal[2]*4
+        scores[score] = bal.bowler
         
-    m=max(list(scores.keys()))
-    return [scores[m],m]
+    m = max(list(scores.keys()))
+    return [scores[m], m]
+
 
 # Importing dataset
 df = pd.read_csv('main.csv')
-
-# Tests
-'''
-print(strike_rate(85, 53))
-print(economy(31, 4))
-'''
-fastest_bowler = extract_ball_speeds()
 
 # Calculating the final score
 total_runs = sum(df.run) + sum(df.wide)
@@ -160,6 +153,7 @@ for batsman in batsmen:
 
 batsman_stat.to_csv('batsman_stat.csv', index=False)
 best_batter = best_batsman(batsman_stat)
+fastest_bowler = extract_ball_speeds()
 
 runslist = []
 wicketslist = []
@@ -189,7 +183,7 @@ i, lis, ll = 0, list(), list()
 lis.append(df.iloc[:, 2].values[0])
 
 for i in df['bowler']:
-    if (i not in lis):
+    if i not in lis:
         lis.append(i)
 
 for i in lis:
@@ -202,7 +196,7 @@ for i in lis:
     NB.append(sum(df2['nb']))
     wickets.append(len(df2.loc[df2['out'] != 'not out']['out']))
     runs.append(sum(df2['run']))
-    eco.append(economy(sum(df2['run']),len(df2['bowler'])))#(sum(df2['run'])) / (len(df2['bowler']) // 6)
+    eco.append(economy(sum(df2['run']), len(df2['bowler'])))
     h = int(df['over'].reshape(-1)[0])
     r = 0
     for j in df2['over']:
@@ -212,7 +206,7 @@ for i in lis:
             m = m + 1
             h = int(j)
         elif int(j) == 0:
-            if (j <= float(int(j) + 0.6)):
+            if j <= float(int(j) + 0.6):
                 r = r + df2['run'].reshape(-1)[m]
                 m = m + 1
                 h = int(j)
@@ -247,7 +241,7 @@ runrate = list()
 count, m, r = 1, 0, 0
 for i in df['over']:
     k = float(i)
-    if (k < float(int(k) + 0.6)):
+    if k < float(int(k) + 0.6):
         r = r + df['run'].reshape(-1)[m]
         m = m + 1
 
@@ -256,6 +250,7 @@ for i in df['over']:
         m = m + 1
         runrate.append(r / count)
         count = count + 1
+
 import matplotlib.pyplot as plt2
 
 o = list(range(1, 21, 1))

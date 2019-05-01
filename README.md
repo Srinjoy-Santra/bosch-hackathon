@@ -75,3 +75,9 @@
 ### Dragnotic's 4th Update:
 - weight.py is the weighted BowlingScore Card
 - WeightedBowlingScoreBoard.csv had the file 
+
+# FILES WE NEED:
+## From outside the venv
+#### - code.py
+#### - xyzCODE.py
+#### - weight.py
