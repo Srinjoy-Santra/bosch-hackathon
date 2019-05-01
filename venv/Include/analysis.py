@@ -13,7 +13,7 @@ def economy(runs_conceded, overs_balled):
 
 def extract_ball_speeds():
     # Finding all the ball speeds
-    f = open('C:\\Users\\Swayamdipta Biswas\\Downloads\\Data.txt', "r+").read()
+    f = open('BOSCH_HACKATHON/Data.txt', "r+").read()
     
     bowling_speeds = re.findall(pattern="[0-9]+[.][0-9]+km/h", string=f)
     print(bowling_speeds)
