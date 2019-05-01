@@ -9,7 +9,7 @@ def strike_rate(runs_scored, balls_faced):
 
 
 def economy(runs_conceded, overs_balled):
-    return "%.2f" % (runs_conceded / overs_balled)
+    return runs_conceded / overs_balled
 
 
 def extract_ball_speeds():
@@ -196,7 +196,8 @@ for i in lis:
     NB.append(sum(df2['nb']))
     wickets.append(len(df2.loc[df2['out'] != 'not out']['out']))
     runs.append(sum(df2['run']))
-    eco.append(economy(sum(df2['run']), len(df2['bowler'])))
+    
+    eco.append(economy(sum(df2['run'])+ +sum(df2['wide']), len(df2['bowler'])/6))
     h = int(df['over'].reshape(-1)[0])
     r = 0
     for j in df2['over']:

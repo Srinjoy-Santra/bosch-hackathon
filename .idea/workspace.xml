@@ -4,8 +4,8 @@
     <list default="true" id="847888df-6b1f-42af-871c-dfc36fd5f373" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Include/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Include/bowler_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/bowler_stat.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Include/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/output.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/render.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/render.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="render.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/Include/render.py">
+      <file leaf-file-name="analysis.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/venv/Include/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="112" column="27" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
+            <state relative-caret-position="198">
+              <caret line="199" column="57" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -45,6 +45,8 @@
       <find>i</find>
       <find>float</find>
       <find>DataBowlers</find>
+      <find>trivia</find>
+      <find>eco</find>
     </findStrings>
     <replaceStrings>
       <replace>bat</replace>
@@ -62,8 +64,8 @@
         <option value="$PROJECT_DIR$/venv/Include/calculation.py" />
         <option value="$PROJECT_DIR$/venv/Include/extractor.py" />
         <option value="$PROJECT_DIR$/venv/Include/code.py" />
-        <option value="$PROJECT_DIR$/venv/Include/analysis.py" />
         <option value="$PROJECT_DIR$/venv/Include/render.py" />
+        <option value="$PROJECT_DIR$/venv/Include/analysis.py" />
       </list>
     </option>
   </component>
@@ -470,17 +472,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/analysis.py">
+    <entry file="file://$PROJECT_DIR$/venv/Include/render.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="224" column="11" selection-start-line="224" selection-end-line="224" selection-end-column="11" />
+        <state relative-caret-position="259">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Include/render.py">
+    <entry file="file://$PROJECT_DIR$/venv/Include/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="112" column="27" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
+        <state relative-caret-position="198">
+          <caret line="199" column="57" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
         </state>
       </provider>
     </entry>
