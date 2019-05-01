@@ -33,10 +33,6 @@ def extract_ball_speeds():
 df = pd.read_csv('main.csv')
 
 # Tests
-'''
-print(strike_rate(85, 53))
-print(economy(31, 4))
-'''
 fastest_bowler = extract_ball_speeds()
 
 # Calculating the final score    
